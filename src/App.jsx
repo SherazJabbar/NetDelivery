@@ -16,7 +16,7 @@ import MenuIcon from "./assets/menu-icon.png";
 function App() {
   return (
     <div>
-      <div className="bg-[url('./assets/home-page-bg.png')] bg-cover bg-center h-screen flex flex-col">
+      <div className="bg-[url('./assets/home-page-bg.png')] bg-cover bg-initial md:bg-center h-screen flex flex-col">
         <div className="flex justify-between px-16 py-10 items-center">
           <div className="flex items-center">
             <img src={logoImage} alt="Logo" className="w-56 mr-2" />
