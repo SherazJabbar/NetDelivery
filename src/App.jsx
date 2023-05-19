@@ -78,8 +78,9 @@ function App() {
             <div className="absolute inset-0 bg-black bg-opacity-50" />
           </div>
           <div className="relative z-10">
-            <h5 className="mb-2 text-2xl font-bold tracking-tight text-white text-left">
-              Become our Courier partner
+            <h5 className="mb-2 text-3xl font-medium tracking-tight text-white text-left">
+              Become our
+              <span className="block">Restaurant partner</span>
             </h5>
             <p className="mb-3 text-white text-left">
               Join our delivery network
@@ -115,8 +116,9 @@ function App() {
             <div className="absolute inset-0 bg-black bg-opacity-50" />
           </div>
           <div className="relative z-10">
-            <h5 className="mb-2 text-2xl font-bold tracking-tight text-white text-left">
-              Become our Courier partner
+            <h5 className="mb-2 text-3xl font-medium tracking-tight text-white text-left">
+              Become our
+              <span className="block">Courier partner</span>
             </h5>
             <p className="mb-3 text-white text-left">
               Join our delivery network
@@ -181,9 +183,21 @@ function App() {
               <p className="mb-4 footer-content">Help</p>
             </div>
             <div className="flex justify-start md:justify-around">
-              <img className="w-12 h-12 mr-3 md:mr-0" src={instagramIcon} alt="Instagram" />
-              <img className="w-12 h-12 mr-3 md:mr-0" src={twitterIcon} alt="Twitter" />
-              <img className="w-12 h-12 mr-3 md:mr-0" src={facebookIcon} alt="Facebook" />
+              <img
+                className="w-12 h-12 mr-3 md:mr-0"
+                src={instagramIcon}
+                alt="Instagram"
+              />
+              <img
+                className="w-12 h-12 mr-3 md:mr-0"
+                src={twitterIcon}
+                alt="Twitter"
+              />
+              <img
+                className="w-12 h-12 mr-3 md:mr-0"
+                src={facebookIcon}
+                alt="Facebook"
+              />
             </div>
           </div>
         </div>
