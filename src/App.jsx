@@ -67,7 +67,7 @@ function App() {
           </div>
         </div>
       </div>
-      <div className="grid grid-col-1 md:grid-cols-2 gap-8 py-44 justify-items-center px-16">
+      <div className="grid grid-col-1 md:grid-cols-2 gap-8 py-44 justify-items-center px-3 md:px-16">
         <div className="w-11/12 max-w-xl cardHeight p-6 relative rounded-2xl overflow-hidden flex flex-col justify-end">
           <div className="absolute inset-0">
             <img
@@ -144,7 +144,7 @@ function App() {
         </div>
       </div>
 
-      <div className="grid grid-cols-2 gap-x-8 px-16">
+      <div className="grid grid-cols-2 gap-x-8 px-16  px-3 md:px-16">
         <div>
           <h5 className="text-3xl large-font  font-black mb-0">
             Cities and Suburbs we do
@@ -180,10 +180,10 @@ function App() {
               <p className="mb-4 footer-content">Privacy Policy</p>
               <p className="mb-4 footer-content">Help</p>
             </div>
-            <div className="flex justify-around">
-              <img className="w-12 h-12" src={instagramIcon} alt="Instagram" />
-              <img className="w-12 h-12" src={twitterIcon} alt="Twitter" />
-              <img className="w-12 h-12" src={facebookIcon} alt="Facebook" />
+            <div className="flex justify-start md:justify-around">
+              <img className="w-12 h-12 mr-3 md:mr-0" src={instagramIcon} alt="Instagram" />
+              <img className="w-12 h-12 mr-3 md:mr-0" src={twitterIcon} alt="Twitter" />
+              <img className="w-12 h-12 mr-3 md:mr-0" src={facebookIcon} alt="Facebook" />
             </div>
           </div>
         </div>

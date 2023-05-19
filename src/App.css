@@ -27,4 +27,16 @@
   .cardHeight {
     height: 360px;
   }
+
+ .footer-height{
+    height: 100% !important;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+
+
+  .footer-height {
+    height: 100% !important;
+  }
 }
