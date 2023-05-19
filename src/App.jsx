@@ -22,25 +22,27 @@ function App() {
             <img src={logoImage} alt="Logo" className="w-56 mr-2" />
           </div>
           <div className="flex space-x-4">
-            <button className="bg-primary text-secondary px-4 py-3 rounded-full flex items-center text-sm font-bold">
+            <button className="bg-white text-secondary px-4 py-3 rounded-full flex items-center text-sm font-bold">
               <img
-                className="mr-2 h-auto md:h-5"
+                className="mr-2 h-auto md:h-4 xl:h-5"
                 src={SignInIcon}
                 alt="Sign In"
               />
-              <span className="hidden md:inline-block">Sign In</span>
+              <span className="hidden md:inline-block text-secondary">
+                Sign In
+              </span>
             </button>
-            <button className="bg-white text-secondary px-4 py-3 rounded-full flex items-center text-sm font-bold">
+            <button className="bg-primary text-secondary px-4 py-3 rounded-full flex items-center text-sm font-bold">
               <img
-                className="mr-2 h-auto md:h-5"
+                className="mr-2 h-auto md:h-4 xl:h-5"
                 src={SignUpIcon}
                 alt="Sign Up"
               />
-              <span className="hidden md:inline-block">Sign Up</span>
+              <span className="hidden md:inline-block text-white">Sign Up</span>
             </button>
-            <button className="bg-white text-secondary px-4 py-3 rounded-full flex items-center text-sm font-bold">
-              <img className="mr-2 h-auto md:h-5" src={MenuIcon} alt="Menu" />
-              <span className="hidden md:inline-block">Menu</span>
+            <button className="bg-primary text-secondary px-4 py-3 rounded-full flex items-center text-sm font-bold">
+              <img className="mr-2 h-auto md:h-4 xl:h-5" src={MenuIcon} alt="Menu" />
+              <span className="hidden md:inline-block text-white">Menu</span>
             </button>
           </div>
         </div>
@@ -57,7 +59,7 @@ function App() {
               placeholder="Enter your address"
               className="px-4 py-2 w-full  lg:w-2/3 mb-6 lg:mb-0 border-none"
             />
-            <button className="bg-primary text-secondary px-4 py-2 w-full lg:w-auto">
+            <button className="bg-primary text-secondary font-medium px-4 py-2 w-full lg:w-auto">
               Order Now
             </button>
           </div>
@@ -67,7 +69,7 @@ function App() {
           </div>
         </div>
       </div>
-      <div className="grid grid-col-1 md:grid-cols-2 gap-8 py-44 justify-items-center px-3 md:px-16">
+      <div className="grid grid-col-1 md:grid-cols-2 gap-8 py-24 xl:py-44 justify-items-center px-3 md:px-16">
         <div className="w-11/12 max-w-xl cardHeight p-6 relative rounded-2xl overflow-hidden flex flex-col justify-end">
           <div className="absolute inset-0">
             <img
@@ -77,17 +79,17 @@ function App() {
             />
             <div className="absolute inset-0 bg-black bg-opacity-50" />
           </div>
-          <div className="relative z-10">
-            <h5 className="mb-2 text-3xl font-medium tracking-tight text-white text-left">
+          <div className="relative z-10 mb-5">
+            <h5 className="mb-2 text-2xl xl:text-3xl font-medium tracking-tight text-white text-left">
               Become our
               <span className="block">Restaurant partner</span>
             </h5>
-            <p className="mb-3 text-white text-left">
-              Join our delivery network
+            <p className="mb-3 text-white text-left text-md xl:text-xl font-medium w-1/2">
+              You do the cooking and we will deliver
             </p>
             <a
               href="#"
-              className="inline-flex items-center px-3 py-2 float-left text-sm font-medium text-secondary bg-white  rounded-full"
+              className="inline-flex items-center px-5 py-4 float-left text-sm font-medium text-secondary bg-white  rounded-full"
             >
               Get started
               <svg
@@ -115,17 +117,17 @@ function App() {
             />
             <div className="absolute inset-0 bg-black bg-opacity-50" />
           </div>
-          <div className="relative z-10">
-            <h5 className="mb-2 text-3xl font-medium tracking-tight text-white text-left">
+          <div className="relative z-10 mb-5">
+            <h5 className="mb-2  text-2xl xl:text-3xl font-medium tracking-tight text-white text-left">
               Become our
               <span className="block">Courier partner</span>
             </h5>
-            <p className="mb-3 text-white text-left">
-              Join our delivery network
+            <p className="mb-3 text-white text-left text-md xl:text-xl font-medium w-1/2">
+              You do the cooking and we will deliver
             </p>
             <a
               href="#"
-              className="inline-flex items-center px-3 py-2 float-left text-sm font-medium text-secondary bg-white  rounded-full"
+              className="inline-flex items-center px-5 py-4 float-left text-sm font-medium text-secondary bg-white  rounded-full"
             >
               Get started
               <svg
@@ -148,12 +150,14 @@ function App() {
 
       <div className="grid grid-cols-2 gap-x-8 px-16  px-3 md:px-16">
         <div>
-          <h5 className="text-2xl  font-black mb-0">
+          <h5 className="text-4xl xl:text-5xl font-extrabold mb-0 leading-tight">
             Cities and Suburbs we do
           </h5>
-          <h5 className="text-2xl  font-black">deliver to</h5>
+          <h5 className="text-4xl xl:text-5xl font-extrabold leading-tight">
+            deliver to
+          </h5>
           <div className="grid grid-cols-1 gap-y-2">
-            <div className="py-5 mt-4 font-black text-2xl">Johannesburg</div>
+            <div className="py-5 mt-4 font-bold text-3xl">Johannesburg</div>
             <div className="py-3 text-base xl:text-xl">Midrand</div>
             <div className="py-3  text-base xl:text-xl">Tembisa</div>
           </div>
@@ -161,7 +165,7 @@ function App() {
       </div>
       <footer className="px-16 mt-24 footer-height bg-gray flex flex-col">
         <div>
-          <img className="w-56 pt-16" src={logoImage} alt="Logo Icon" />
+          <img className="w-44 xl:w-56 pt-5 xl:pt-20 pb-5 xl:pb-0" src={logoImage} alt="Logo Icon" />
         </div>
 
         <div className="flex flex-col justify-center flex-grow">
@@ -200,6 +204,10 @@ function App() {
               />
             </div>
           </div>
+        </div>
+
+        <div className="py-10">
+          <p className="text-md xl:text-xl font-medium"> © 2022 NetDelivery (Pty) Ltd </p>
         </div>
       </footer>
     </div>

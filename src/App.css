@@ -3,19 +3,19 @@
 }
 
 .footer-height {
-  height: 400px;
+  height: 500px;
 }
 
 .footer-content {
-  font-size: 16px;
+  font-size: 24px;
   font-weight: 500;
 }
 
 @media screen and (min-width: 1440px) {
-  .text-2xl {
+  /* .text-2xl {
     font-size: 40px !important;
     line-height: 48px !important;
-  }
+  } */
 
   .large-font {
     font-size: 44px !important;
@@ -33,6 +33,14 @@
   }
 }
 
+
+@media screen and (max-width: 1440px) {
+
+  .footer-content {
+    font-size: 16px;
+    font-weight: 500;
+  }
+}
 @media screen and (max-width: 1024px) {
 
 
