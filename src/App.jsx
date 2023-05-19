@@ -146,10 +146,10 @@ function App() {
 
       <div className="grid grid-cols-2 gap-x-8 px-16  px-3 md:px-16">
         <div>
-          <h5 className="text-3xl large-font  font-black mb-0">
+          <h5 className="text-2xl  font-black mb-0">
             Cities and Suburbs we do
           </h5>
-          <h5 className="text-3xl large-font  font-black">deliver to</h5>
+          <h5 className="text-2xl  font-black">deliver to</h5>
           <div className="grid grid-cols-1 gap-y-2">
             <div className="py-5 mt-4 font-black text-2xl">Johannesburg</div>
             <div className="py-3 text-base xl:text-xl">Midrand</div>
