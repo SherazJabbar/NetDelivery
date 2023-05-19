@@ -13,7 +13,7 @@ module.exports = {
       },
       fontFamily: {
         heading: ['Inter', 'sans-serif'],
-        body: ['Arial', 'sans-serif'],
+        body: ['Inter', 'sans-serif'],
       },
       spacing: {
          sm: '8px',
