@@ -9,6 +9,10 @@ export const Navbar = () => {
   const location = useLocation();
   const isPickupRoute = location.pathname === "/pickup";
   const isOrdersRoute = location.pathname === "/orders";
+const showSearch = location.pathname === "/favourites" || location.pathname === "/orders" || location.pathname === "/pickup";
+
+const showLocation = location.pathname === "/favourites" || location.pathname === "/orders";
+
 
   return (
     <div className="flex justify-between px-16 py-10 items-center">
@@ -16,7 +20,7 @@ export const Navbar = () => {
         <img src={logoImage} alt="Logo" className="w-56 mr-2" />
       </div>
 
-      {isOrdersRoute && (
+      {showLocation && (
         <div>
           <form>
             <div className="relative mx-4">
@@ -29,8 +33,8 @@ export const Navbar = () => {
               </div>
 
               <input
-                type="search"
-                id="default-search"
+                type="text"
+                id="default-location"
                 className="block w-full p-2 pl-10 text-sm text-gray-900 border-none bg-gray border-gray-300 rounded-full focus:border-none"
                 defaultValue="539, Bluegum street"
                 required
@@ -40,8 +44,7 @@ export const Navbar = () => {
         </div>
       )}
 
-      {isPickupRoute ||
-        (isOrdersRoute && (
+      {showSearch && (
           <div className="flex-grow">
             <form>
               <div className="relative mx-4">
@@ -73,7 +76,7 @@ export const Navbar = () => {
               </div>
             </form>
           </div>
-        ))}
+        )}
       <div className="flex space-x-4 items-center">
         {isPickupRoute && (
           <div className="flex items-center">
@@ -102,7 +105,7 @@ export const Navbar = () => {
           </button>
         )}
 
-        {!isOrdersRoute && (
+        {!showLocation && (
           <button className="bg-primary text-white px-4 py-3 rounded-full flex items-center text-sm font-bold">
             <img
               className="mr-2 h-auto md:h-4 xl:h-5 navbar-icon-color"
@@ -113,7 +116,7 @@ export const Navbar = () => {
           </button>
         )}
 
-        {isOrdersRoute && (
+        {showLocation && (
           <button className="bg-primary text-white px-4 py-3 rounded-full flex items-center text-sm font-bold">
             <img
               className="mr-2 h-4 xl:h-5 navbar-icon-color"

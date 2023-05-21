@@ -5,7 +5,7 @@ import DeliverToAddress from "./features/cart/DeliverToAddress";
 import PickupPage from "./features/deliveryPickup/DeliveryPickup"
 import NetAccess from "./layouts/NetAccess"
 import Orders from "./features/profile/orders/Orders"
-
+import Favourites from "./features/profile/favourites/Favourites"
 const App = () => {
   return (
     <BrowserRouter>
@@ -16,6 +16,7 @@ const App = () => {
         <Route path="/pickup" element={<PickupPage />} />
         <Route path="/netaccess" element={<NetAccess />} />
         <Route path="/orders" element={<Orders />} />
+          <Route path="/favourites" element={<Favourites />} />
       </Routes>
     </BrowserRouter>
   );
