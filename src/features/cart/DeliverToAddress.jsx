@@ -25,11 +25,13 @@ const DeliverToAddress = () => {
       {isModalOpen && (
         <div className="fixed top-0 left-0 right-0 bottom-0 bg-black bg-opacity-50 flex items-center justify-center">
           <div className="bg-gray p-4 1/2 xl:w-1/4">
-            <div className="flex items-center justify-between mb-2">
-              <div className="pb-2">Deliver To</div>
-              <button className="text-primary" onClick={closeModal}>
+            <div>
+              <button className="text-primary pb-4" onClick={closeModal}>
                 X
               </button>
+            </div>
+            <div className="mb-2">
+              <div className="pb-2 font-bold">Deliver To</div>
             </div>
 
             <div className="relative">
@@ -47,7 +49,7 @@ const DeliverToAddress = () => {
               </div>
             </div>
 
-            <div className="py-4">
+            <div className="py-4 max-h-64 overflow-y-scroll break-all">
               <div className="my-2 flex items-center">
                 <img
                   src={locationIcon}
@@ -66,7 +68,7 @@ const DeliverToAddress = () => {
                   className="w-4 h-4 ml-auto"
                 />
               </div>
-              <hr className="my-2 border-gray-300"></hr>
+              <hr className="my-2 border-darkgray"></hr>
 
               <div className="my-2 flex items-center">
                 <img
@@ -86,7 +88,7 @@ const DeliverToAddress = () => {
                   className="w-4 h-4 ml-auto"
                 />
               </div>
-              <hr className="my-2 border-gray-300"></hr>
+              <hr className="my-2 border-darkgray"></hr>
 
               <div className="my-2 flex items-center">
                 <img
@@ -106,7 +108,7 @@ const DeliverToAddress = () => {
               </div>
             </div>
 
-            <button className="bg-primary text-white px-4 py-2 w-full">
+            <button className="bg-primary text-secondary px-4 py-2 w-full">
               Done
             </button>
           </div>
