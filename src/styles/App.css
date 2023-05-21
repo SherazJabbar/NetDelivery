@@ -11,6 +11,19 @@
   font-weight: 500;
 }
 
+.navbar-icon-color{
+  filter: brightness(0) invert(1);
+}
+
+.delivery-card{
+  background: white !important;
+}
+
+.delivery-card-height {
+  height: 100%;
+  max-height: calc(100vh - 260px);
+  overflow-y: scroll;
+}
 @media screen and (min-width: 1440px) {
   /* .text-2xl {
     font-size: 40px !important;

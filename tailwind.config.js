@@ -19,13 +19,16 @@ fontSize: {
         '5xl': '3rem',      // 48px
         '6xl': '4rem',      // 64px
       },
+       minHeight: {
+      '28': '112px',
+    },
  
     extend: {
       colors: {
         primary: '#FCBC04',
         secondary: '#000000',
         white: '#F5F5F5',
-        gray: '#FBFBFB',
+        gray: '#F2F2F2',
         darkgray: '#eeeeee',
       },
       fontFamily: {
