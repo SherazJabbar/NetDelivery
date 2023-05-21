@@ -3,6 +3,7 @@ import WelcomePage from "./layouts/WelcomePage";
 import Auth from "./features/auth/Auth";
 import DeliverToAddress from "./features/cart/DeliverToAddress";
 import PickupPage from "./features/deliveryPickup/DeliveryPickup"
+import NetAccess from "./layouts/NetAccess"
 
 const App = () => {
   return (
@@ -12,6 +13,7 @@ const App = () => {
         <Route path="/signup" element={<Auth />} />
         <Route path="/deliver-to-address" element={<DeliverToAddress />} />
         <Route path="/pickup" element={<PickupPage />} />
+        <Route path="/netaccess" element={<NetAccess />} />
       </Routes>
     </BrowserRouter>
   );
