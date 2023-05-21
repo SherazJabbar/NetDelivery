@@ -1,0 +1,119 @@
+import React, { useState } from "react";
+import locationIcon from "../../assets/location-pin.png";
+import editIcon from "../../assets/pencil.png";
+
+const DeliverToAddress = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
+
+  return (
+    <div>
+      <div>
+        <button className="bg-primary text-white px-4 py-2" onClick={openModal}>
+          Open Modal
+        </button>
+      </div>
+
+      {/* Modal */}
+      {isModalOpen && (
+        <div className="fixed top-0 left-0 right-0 bottom-0 bg-black bg-opacity-50 flex items-center justify-center">
+          <div className="bg-gray p-4 1/2 xl:w-1/4">
+            <div className="flex items-center justify-between mb-2">
+              <div className="pb-2">Deliver To</div>
+              <button className="text-primary" onClick={closeModal}>
+                X
+              </button>
+            </div>
+
+            <div className="relative">
+              <input
+                className="border text-xs border-none bg-darkgray w-full pl-8"
+                type="text"
+                placeholder="Deliver to address"
+              />
+              <div className="absolute inset-y-0 left-0 flex items-center pl-2">
+                <img
+                  src={locationIcon}
+                  alt="Location Icon"
+                  className="w-4 h-4"
+                />
+              </div>
+            </div>
+
+            <div className="py-4">
+              <div className="my-2 flex items-center">
+                <img
+                  src={locationIcon}
+                  alt="Location Icon"
+                  className="w-4 h-4 mr-2"
+                />
+                <div className="flex flex-col">
+                  <div className="font-semibold text-md">Umthunzi View</div>
+                  <div className="text-sm">
+                    143, Walton Eve, Cartswald, Midrand
+                  </div>
+                </div>
+                <img
+                  src={editIcon}
+                  alt="Edit Icon"
+                  className="w-4 h-4 ml-auto"
+                />
+              </div>
+              <hr className="my-2 border-gray-300"></hr>
+
+              <div className="my-2 flex items-center">
+                <img
+                  src={locationIcon}
+                  alt="Location Icon"
+                  className="w-4 h-4 mr-2"
+                />
+                <div className="flex flex-col">
+                  <div className="font-semibold text-md">
+                    579, Blugum street
+                  </div>
+                  <div className="text-sm">Eboni Park, Midrand</div>
+                </div>
+                <img
+                  src={editIcon}
+                  alt="Edit Icon"
+                  className="w-4 h-4 ml-auto"
+                />
+              </div>
+              <hr className="my-2 border-gray-300"></hr>
+
+              <div className="my-2 flex items-center">
+                <img
+                  src={locationIcon}
+                  alt="Location Icon"
+                  className="w-4 h-4 mr-2"
+                />
+                <div className="flex flex-col">
+                  <div className="font-semibold text-md">41 Avalon Road</div>
+                  <div className="text-sm">Modderfontein, Lethabong</div>
+                </div>
+                <img
+                  src={editIcon}
+                  alt="Edit Icon"
+                  className="w-4 h-4 ml-auto"
+                />
+              </div>
+            </div>
+
+            <button className="bg-primary text-white px-4 py-2 w-full">
+              Done
+            </button>
+          </div>
+        </div>
+      )}
+    </div>
+  );
+};
+
+export default DeliverToAddress;

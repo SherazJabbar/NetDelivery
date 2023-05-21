@@ -4,12 +4,29 @@ const { gray } = require('tailwindcss/colors');
 module.exports = {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
+
+
+fontSize: {
+        'xs': '0.75rem',    // 12px
+        'sm': '0.875rem',
+        'md': '15px',   // 14px
+        'base': '1rem',     // 16px
+        'lg': '1.125rem',   // 18px
+        'xl': '1.25rem',    // 20px
+        '2xl': '1.5rem',    // 24px
+        '3xl': '1.875rem',  // 30px
+        '4xl': '2.25rem',   // 36px
+        '5xl': '3rem',      // 48px
+        '6xl': '4rem',      // 64px
+      },
+ 
     extend: {
       colors: {
         primary: '#FCBC04',
         secondary: '#000000',
         white: '#F5F5F5',
-        gray: '#FBFBFB'
+        gray: '#FBFBFB',
+        darkgray: '#eeeeee',
       },
       fontFamily: {
         heading: ['Inter', 'sans-serif'],
