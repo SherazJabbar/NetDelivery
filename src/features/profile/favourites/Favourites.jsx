@@ -2,7 +2,6 @@ import Navbar from "../../../components/Navbar";
 import Food1 from "../../../assets/food-1.jpg";
 import Food2 from "../../../assets/food-2.jpg";
 import Food3 from "../../../assets/food-3.jpg";
-import Food4 from "../../../assets/food-4.jpg";
 
 export const Favourites = () => {
   return (
