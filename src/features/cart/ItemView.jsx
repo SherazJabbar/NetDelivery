@@ -9,6 +9,18 @@ export const ItemView = () => {
   const toggleAccordion = () => {
     setAccordionOpen(!accordionOpen);
   };
+
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const handleOrderClick = () => {
+    setIsModalOpen(true);
+    document.body.style.overflow = "hidden"; // Stop background scroll
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+    document.body.style.overflow = "auto"; // Enable background scroll
+  };
   return (
     <div>
       <Navbar />
@@ -96,7 +108,7 @@ export const ItemView = () => {
                   placeholder="Add a note"
                 ></textarea>
               </div>
-              <hr className="my-2 border-darkgray"></hr>
+              <hr className="my-2 border-secondary"></hr>
               <div className="mt-4">
                 <input
                   type="number"
@@ -105,13 +117,62 @@ export const ItemView = () => {
                   defaultValue="1"
                 />
               </div>
-              <button className="mt-4 bg-primary text-white text-md font-semibold px-4 py-2 rounded w-full">
+              <button
+                className="mt-4 bg-primary text-white text-md font-semibold px-4 py-2 rounded w-full"
+                onClick={handleOrderClick}
+              >
                 Add to Order <span className="ml-2">R12134</span>
               </button>
             </div>
           </div>
         </div>
       </div>
+
+      {/* Modal */}
+
+      {isModalOpen && (
+        <div className="fixed top-0 right-0 bottom-0 bg-black bg-opacity-50 flex items-center justify-end w-full">
+          <div className="bg-gray relative p-10 w-full sm:w-1/2 lg:w-1/4 h-full flex flex-col justify-between">
+            {/* Modal content */}
+            <div>
+              <h1 className="text-xl font-bold">KFC, BraanFontein</h1>
+              <p className="text-sm py-3 text-secondary">
+                Deliver to <span>539, Belgium Street.</span>
+              </p>
+              <div className="flex my-4 text-md">
+                <button className="rounded-full bg-primary text-white px-4 py-1 mr-2">
+                  Add Items
+                </button>
+                <button className="rounded-full bg-primary text-white px-4 py-1">
+                  Group Order
+                </button>
+              </div>
+              <div className="my-2">
+                <input
+                  type="number"
+                  id="quantity"
+                  className="w-10 max-w-max px-2 py-1 border border-none bg-gray rounded ml-2"
+                  defaultValue="1"
+                />
+                <span className="ml-2 font-semibold leading-none">
+                  Double Sweet Chilli Cheese Cruch Burger meal buddy
+                </span>
+              </div>
+              <p className="text-sm text-secondary font-medium">R 5790</p>
+              <p className="text-red text-center my-4">Clear Cart</p>
+            </div>
+            <button
+              className="absolute top-0 right-0 m-4 text-primary"
+              onClick={closeModal}
+            >
+              X
+            </button>
+            <button className="rounded-lg bg-primary text-white px-4 py-1 absolute bottom-0 w-full">
+              Go to Checkout
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
