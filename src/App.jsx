@@ -7,6 +7,7 @@ import NetAccess from "./layouts/NetAccess";
 import Orders from "./features/profile/orders/Orders";
 import Favourites from "./features/profile/favourites/Favourites";
 import ItemView from "./features/cart/ItemView";
+import Checkout from "./features/cart/Checkout";
 const App = () => {
   return (
     <BrowserRouter>
@@ -19,6 +20,7 @@ const App = () => {
         <Route path="/orders" element={<Orders />} />
         <Route path="/favourites" element={<Favourites />} />
         <Route path="/view-item" element={<ItemView />} />
+        <Route path="/checkout" element={<Checkout />} />
       </Routes>
     </BrowserRouter>
   );

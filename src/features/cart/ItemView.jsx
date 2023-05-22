@@ -132,14 +132,14 @@ export const ItemView = () => {
 
       {isModalOpen && (
         <div className="fixed top-0 right-0 bottom-0 bg-black bg-opacity-50 flex items-center justify-end w-full">
-          <div className="bg-gray relative p-10 w-full sm:w-1/2 lg:w-1/4 h-full flex flex-col justify-between">
+          <div className="bg-white relative p-10 w-full sm:w-1/2 lg:w-1/4 h-full flex flex-col justify-between">
             {/* Modal content */}
             <div>
               <h1 className="text-xl font-bold">KFC, BraanFontein</h1>
               <p className="text-sm py-3 text-secondary">
                 Deliver to <span>539, Belgium Street.</span>
               </p>
-              <div className="flex my-4 text-md">
+              <div className="flex my-4 text-md justify-start">
                 <button className="rounded-full bg-primary text-white px-4 py-1 mr-2">
                   Add Items
                 </button>
@@ -167,7 +167,7 @@ export const ItemView = () => {
             >
               X
             </button>
-            <button className="rounded-lg bg-primary text-white px-4 py-1 absolute bottom-0 w-full">
+            <button className="rounded bg-primary text-white px-4 py-1 absolute bottom-2 left-1/2 transform -translate-x-1/2 w-11/12">
               Go to Checkout
             </button>
           </div>
