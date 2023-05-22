@@ -216,11 +216,45 @@ export const Checkout = () => {
                   </div>
 
                   <div>
-                     <p className="text-xs text-graytext">
-                          100% of your tip goes to courier. Tips are based on your order
-                          total of R 67.15 before any discounts or promotions
-                        </p>
+                    <p className="text-xs text-graytext">
+                      100% of your tip goes to courier. Tips are based on your
+                      order total of R 67.15 before any discounts or promotions
+                    </p>
                   </div>
+
+                  <div className="flex my-3 overflow-x-scroll whitespace-nowrap">
+                    <button className="rounded-full bg-primary text-white text-xs px-2 py-1 mr-2">
+                      Not Now
+                    </button>
+                    <button className="rounded-full bg-primary text-white text-xs px-2 py-1 mr-2">
+                      10%
+                    </button>
+                    <button className="rounded-full bg-primary text-white text-xs px-2 py-1 mr-2">
+                      15%
+                    </button>
+                    <button className="rounded-full bg-primary text-white text-xs px-2 py-1 mr-2">
+                      20%
+                    </button>
+                    <button className="rounded-full bg-primary text-white text-xs px-2 py-1 mr-2">
+                      25%
+                    </button>
+                    <button className="rounded-full bg-primary text-white text-xs px-2 py-1 mr-2">
+                      30%
+                    </button>{" "}
+                    <button className="rounded-full bg-primary text-white text-xs px-2 py-1 mr-2">
+                      35%
+                    </button>
+                    <button className="rounded-full bg-primary text-white text-xs px-2 py-1 mr-2">
+                      50%
+                    </button>
+                  </div>
+
+                     <div className="grid grid-cols-2 gap-2 my-1 font-semibold">
+                      <div className="text-xs">Total</div>
+                      <div className="text-sm text-end ">
+                        R <span>6715</span>
+                      </div>
+                    </div>
                 </div>
               </div>
             </div>
