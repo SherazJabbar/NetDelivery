@@ -91,5 +91,4 @@ const AddPaymentMethod = () => {
     </div>
   );
 };
-
 export default AddPaymentMethod;
