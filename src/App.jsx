@@ -11,7 +11,7 @@ import Checkout from "./features/cart/Checkout";
 import PaymentMethods from "./features/profile/payment/paymentMethods";
 import AddPaymentMethod from "./features/profile/payment/AddPaymentMethod";
 import CardDetail from "./features/profile/payment/CardDetail";
-
+import PaymentOptions from "./features/cart/PaymentOptions";
 
 const App = () => {
   return (
@@ -29,6 +29,7 @@ const App = () => {
         <Route path="/payment-methods" element={<PaymentMethods />} />
         <Route path="/add-payment-method" element={<AddPaymentMethod />} />
         <Route path="/add-card-details" element={<CardDetail />} />
+        <Route path="/add-payment-options" element={<PaymentOptions />} />
       </Routes>
     </BrowserRouter>
   );
