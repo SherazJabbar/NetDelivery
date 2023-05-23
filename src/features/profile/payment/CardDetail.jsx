@@ -22,7 +22,7 @@ const CardDetail = () => {
       {/* Modal */}
       {isModalOpen && (
         <div className="fixed top-0 left-0 right-0 bottom-0 bg-black bg-opacity-50 flex items-center justify-center">
-          <div className="bg-gray p-4 w-max rounded-md">
+          <div className="bg-white p-4 w-2/6 rounded-md">
             <div>
               <button className="text-primary" onClick={closeModal}>
                 X
@@ -32,80 +32,85 @@ const CardDetail = () => {
               Add Credit Card or Debit Card
             </h2>
 
-            <div className="grid grid-cols-2 gap-4">
-              <div>
+            <div className="grid grid-cols-1 gap-2">
+              <div className="flex flex-col">
                 <label
                   htmlFor="cardNumber"
-                  className="text-sm font-semibold mb-1"
+                  className="text-sm font-semibold mb-1 text-xs"
                 >
                   Card Number
                 </label>
                 <input
                   type="text"
                   id="cardNumber"
-                  className="border border-gray-300 p-2 mt-1"
+                  className="py-1 px-2 mt-1 text-xs rounded bg-gray border-none"
                 />
               </div>
-              <div className="grid grid-cols-2 gap-4">
-                <div>
+              <div className="grid grid-cols-2 gap-2">
+                <div className="flex flex-col">
                   <label
                     htmlFor="expiryDate"
-                    className="text-sm font-semibold mb-1"
+                    className="text-sm font-semibold mb-1  text-xs"
                   >
                     Expiry Date
                   </label>
                   <input
                     type="text"
                     id="expiryDate"
-                    className="border border-gray-300 p-2 mt-1"
+                    className="py-1 px-2 mt-1 text-xs rounded bg-gray border-none"
                   />
                 </div>
-                <div>
+                <div className="flex flex-col">
                   <label
                     htmlFor="securityCode"
-                    className="text-sm font-semibold mb-1"
+                    className="text-sm font-semibold mb-1  text-xs"
                   >
                     Security Code
                   </label>
                   <input
                     type="text"
                     id="securityCode"
-                    className="border border-gray-300 p-2 mt-1"
+                    className="py-1 px-2 mt-1 text-xs rounded bg-gray border-none"
                   />
                 </div>
               </div>
-              <div>
-                <label htmlFor="country" className="text-sm font-semibold mb-1">
+              <div className="flex flex-col">
+                <label
+                  htmlFor="country"
+                  className="text-sm font-semibold mb-1  text-xs"
+                >
                   Country
                 </label>
                 <select
                   id="country"
-                  className="border border-gray-300 p-2 mt-1"
+                  className="py-1 px-2 mt-1 text-xs rounded bg-gray border-none"
                 >
                   <option value="">Select a country</option>
                   {/* Add your country options here */}
                 </select>
               </div>
-              <div>
+              <div className="flex flex-col">
                 <label
                   htmlFor="nickname"
-                  className="text-sm font-semibold mb-1"
+                  className="text-sm font-semibold mb-1  text-xs"
                 >
                   Nickname
                 </label>
                 <input
                   type="text"
                   id="nickname"
-                  className="border border-gray-300 p-2 mt-1"
+                  className="py-1 px-2 mt-1 text-xs rounded bg-gray border-none"
                 />
               </div>
             </div>
 
             <div className="mt-4">
-              <button className="bg-primary text-white px-4 py-2">
+              <button className="bg-primary text-white px-4 py-2 w-full rounded">
                 Add Card
               </button>
-              <button className="bg-white border border-red-500 text-red-500 px-4 py-2 ml-2">
+            </div>
+            <div className="mt-4">
+              <button className="bg-white border border-red text-red px-4 py-2 w-full rounded">
                 Cancel
               </button>
             </div>
