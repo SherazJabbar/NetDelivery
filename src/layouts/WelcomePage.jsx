@@ -245,7 +245,7 @@ export const WelcomePage = () => {
       {/* Modal */}
       {isModalOpen && (
         <div className="fixed top-0 right-0 bottom-0 bg-black bg-opacity-50 flex items-center justify-end w-full">
-          <div className="bg-gray p-10 w-full sm:w-1/2 lg:w-1/4 h-full flex flex-col justify-between">
+          <div className="bg-white p-10 w-full sm:w-1/2 lg:w-1/4 h-full flex flex-col justify-between">
             {/* Modal content */}
             <div className="flex flex-col gap-y-4">
               <div className="flex items-center justify-center">
