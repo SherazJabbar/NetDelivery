@@ -8,6 +8,11 @@ import Orders from "./features/profile/orders/Orders";
 import Favourites from "./features/profile/favourites/Favourites";
 import ItemView from "./features/cart/ItemView";
 import Checkout from "./features/cart/Checkout";
+import PaymentMethods from "./features/profile/payment/paymentMethods";
+import AddPaymentMethod from "./features/profile/payment/AddPaymentMethod";
+import CardDetail from "./features/profile/payment/CardDetail";
+
+
 const App = () => {
   return (
     <BrowserRouter>
@@ -21,6 +26,9 @@ const App = () => {
         <Route path="/favourites" element={<Favourites />} />
         <Route path="/view-item" element={<ItemView />} />
         <Route path="/checkout" element={<Checkout />} />
+        <Route path="/payment-methods" element={<PaymentMethods />} />
+        <Route path="/add-payment-method" element={<AddPaymentMethod />} />
+        <Route path="/add-card-details" element={<CardDetail />} />
       </Routes>
     </BrowserRouter>
   );
