@@ -12,7 +12,7 @@ const PasswordLogin = () => {
       {/* Auth Content */}
       <div className="flex items-center justify-center bg-gray-100">
        
-        <div className="flex flex-col items-center justify-center w-full md:w-1/2 lg:w-1/4 xl:w-1/5 px-5 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+        <div className="flex flex-col items-center justify-center w-full sm:w-1/2 lg:w-1/4 xl:w-1/5 px-5 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
            <div className="text-left">
 
               <h1 className="text-xl font-semibold mb-4">
