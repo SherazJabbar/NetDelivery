@@ -22,7 +22,7 @@ const CardDetail = () => {
       {/* Modal */}
       {isModalOpen && (
         <div className="fixed top-0 left-0 right-0 bottom-0 bg-black bg-opacity-50 flex items-center justify-center">
-          <div className="bg-white p-4 w-2/6 rounded-md">
+          <div className="bg-white p-4 w-11/12 md:w-2/6 rounded-md">
             <div>
               <button className="text-primary" onClick={closeModal}>
                 X
@@ -46,7 +46,7 @@ const CardDetail = () => {
                   className="py-1 px-2 mt-1 text-xs rounded bg-gray border-none"
                 />
               </div>
-              <div className="grid grid-cols-2 gap-2">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                 <div className="flex flex-col">
                   <label
                     htmlFor="expiryDate"
@@ -86,7 +86,6 @@ const CardDetail = () => {
                   className="py-1 px-2 mt-1 text-xs rounded bg-gray border-none"
                 >
                   <option value="">Select a country</option>
-                  {/* Add your country options here */}
                 </select>
               </div>
               <div className="flex flex-col">
