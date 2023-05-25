@@ -42,7 +42,6 @@ const App = () => {
         <Route path="/password-login" element={<PasswordLogin />} />
         <Route path="/step-1" element={<NewSignupStep1 />} />
         <Route path="/step-2" element={<NewSignupStep2 />} />
-        
       </Routes>
     </BrowserRouter>
   );
