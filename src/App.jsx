@@ -18,6 +18,7 @@ import CellphoneSignup from "./features/auth/authenticationFlows/CellphoneSignup
 import PasswordLogin from "./features/auth/authenticationFlows/PasswordLogin";
 import NewSignupStep1 from "./features/auth/authenticationFlows/NewSignupStep1";
 import NewSignupStep2 from "./features/auth/authenticationFlows/NewSignupStep2";
+import TermsandConditions from "./features/auth/authenticationFlows/TermsandConditions";
 
 const App = () => {
   return (
@@ -42,6 +43,7 @@ const App = () => {
         <Route path="/password-login" element={<PasswordLogin />} />
         <Route path="/step-1" element={<NewSignupStep1 />} />
         <Route path="/step-2" element={<NewSignupStep2 />} />
+        <Route path="/terms-and-conditions" element={<TermsandConditions />} />
       </Routes>
     </BrowserRouter>
   );
