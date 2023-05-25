@@ -41,7 +41,7 @@ export const PickupPage = () => {
           </div>
           <div></div>
         </div>
-        <div className="text-lg font-semibold w-1/5">
+        <div className="text-lg font-semibold w-full sm:w-1/2 md:w-1/5">
           <p>Pick up near Freedom Road, Midrand</p>
         </div>
 

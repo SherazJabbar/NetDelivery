@@ -22,7 +22,7 @@ const AddPaymentMethod = () => {
       {/* Modal */}
       {isModalOpen && (
         <div className="fixed top-0 left-0 right-0 bottom-0 bg-black bg-opacity-50 flex items-center justify-center">
-          <div className="bg-gray p-4 h-1/2 w-1/2 md:w-2/6 rounded-md">
+          <div className="bg-white p-4 h-1/2 w-11/12 md:w-2/6 rounded-md">
             <div>
               <button className="text-primary" onClick={closeModal}>
                 X

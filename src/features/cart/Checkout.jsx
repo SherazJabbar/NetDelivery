@@ -177,35 +177,35 @@ export const Checkout = () => {
                 <div className="bg-white p-4 mt-4 rounded-lg shadow-sm">
                   <h2 className="text-md font-semibold">Order total </h2>
                   <div>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 my-1">
+                    <div className="grid grid-cols-2 gap-2 my-1">
                       <div className="text-xs">SubTotal</div>
                       <div className="text-xs text-start sm:text-end">
                         R <span>4490</span>
                       </div>
                     </div>
 
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 my-1">
+                    <div className="grid grid-cols-2 gap-2 my-1">
                       <div className="text-xs">Fee</div>
                       <div className="text-xs text-start sm:text-end">
                         <span></span>
                       </div>
                     </div>
 
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 my-1">
+                    <div className="grid grid-cols-2 gap-2 my-1">
                       <div className="text-xs">Small Order</div>
                       <div className="text-xs text-start sm:text-end">
                         R<span> 500</span>
                       </div>
                     </div>
 
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 my-1">
+                    <div className="grid grid-cols-2 gap-2 my-1">
                       <div className="text-xs">Service</div>
                       <div className="text-xs text-start sm:text-end">
                         R<span> 232</span>
                       </div>
                     </div>
 
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 my-1">
+                    <div className="grid grid-cols-2 gap-2 my-1">
                       <div className="text-xs">Delivery</div>
                       <div className="text-xs text-start sm:text-end">
                         R<span> 1200</span>
@@ -213,7 +213,7 @@ export const Checkout = () => {
                     </div>
                   </div>
                   <hr className="my-2 border-darkgray"></hr>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 my-1">
+                  <div className="grid grid-cols-2 gap-2 my-1">
                     <div className="text-xs font-medium">Add a Tip</div>
                     <div className="text-xs text-start sm:text-end">
                       R<span> 0,00</span>
@@ -254,7 +254,7 @@ export const Checkout = () => {
                     </button>
                   </div>
 
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 my-1 font-semibold">
+                  <div className="grid grid-cols-2 gap-2 my-1 font-semibold">
                     <div className="text-xs">Total</div>
                     <div className="text-sm text-start sm:text-end ">
                       R <span>6715</span>
@@ -283,7 +283,7 @@ export const Checkout = () => {
 
                   <hr className="my-2 border-darkgray"></hr>
 
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 my-1 font-semibold">
+                  <div className="grid grid-cols-2 gap-2 my-1 font-semibold">
                     <div className="text-lg">Order Summary</div>
                     <div className="text-sm text-start sm:text-end ">
                       <button className="rounded-full bg-primary text-white text-xs font-medium px-2 py-1 mr-2">

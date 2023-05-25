@@ -9,7 +9,7 @@ const PaymentMethods = () => {
 
   return (
     <div className="flex justify-center items-center w-full h-full">
-      <div className="px-16 w-1/2">
+      <div className="px-16 w-full md:w-1/2">
         <div>
           <h2 className="text-lg font-medium ml-2">Payment Methods</h2>
         </div>
@@ -17,7 +17,7 @@ const PaymentMethods = () => {
           {cards.map((card, index) => (
             <div
               key={index}
-              className={`bg-green rounded-lg shadow-sm p-6 w-96 h-48 ${
+              className={`bg-green rounded-lg shadow-sm p-6 w-full md:w-96 h-48 ${
                 index % 2 === 0 ? "justify-self-end" : "justify-self-start"
               }`}
             >

@@ -29,7 +29,7 @@ const Auth = () => {
             <p className="mx-2 text-gray-500">- Or -</p>
             <div className="flex-grow h-px bg-gray-300"></div>
           </div>
-          <div>
+          <div className="w-full"> 
           <button className="w-full bg-gray text-secondary py-2 rounded mb-2 px-4 flex items-center justify-center">
             <img className="w-4 h-4 mr-2" src={google} alt="Google" />
             Continue with Google

@@ -25,8 +25,8 @@ export const ItemView = () => {
     <div>
       <Navbar />
       <div className="px-16 py-8">
-        <div className="w-1/2 mx-auto">
-          <div className="grid grid-cols-2 gap-8">
+        <div className="w-full md:w-1/2 mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div>
               <img
                 src={Food1}

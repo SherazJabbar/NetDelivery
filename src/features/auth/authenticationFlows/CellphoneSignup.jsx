@@ -19,13 +19,10 @@ const CellphoneSignup = () => {
             What's your phone number or email?
           </h1>
           <div className="flex gap-x-4 mb-4">
-            {/* Dropdown */}
             <select className="px-4 py-2 rounded border-none bg-gray">
               <option value="US">US</option>
               <option value="UK">UK</option>
-              {/* Add more countries here */}
             </select>
-            {/* Input Field */}
             <input
               className="px-4 py-2 rounded border-none bg-gray w-11/12"
               type="text"
@@ -35,13 +32,12 @@ const CellphoneSignup = () => {
           <button className="w-full bg-primary text-secondary py-2 rounded mb-4">
             Continue
           </button>
-          {/* Other buttons */}
           <div className="mb-4 flex items-center">
             <div className="flex-grow h-px bg-gray-300"></div>
             <p className="mx-2 text-gray-500">- Or -</p>
             <div className="flex-grow h-px bg-gray-300"></div>
           </div>
-          <div>
+          <div className="w-full">
             {/* Google */}
             <button className="w-full bg-gray text-secondary py-2 rounded mb-2 px-4 flex items-center justify-center">
               <img className="w-4 h-4 mr-2" src={google} alt="Google" />

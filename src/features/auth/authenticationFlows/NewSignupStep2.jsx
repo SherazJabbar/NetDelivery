@@ -11,7 +11,7 @@ const NewSignupStep2 = () => {
 
       {/* Auth Content */}
       <div className="flex items-center justify-center bg-gray-100">
-        <div className="flex flex-col items-center justify-center w-full sm:w-1/2 lg:w-1/4 xl:w-1/5 px-5 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+        <div className="flex flex-col md:items-center justify-center w-full sm:w-1/2 lg:w-1/4 xl:w-1/5 px-5 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
           <div>
             <h1 className="text-xl font-semibold mb-4">
               What's your email address?
@@ -21,7 +21,7 @@ const NewSignupStep2 = () => {
             </h1>
           </div>
 
-          <form>
+          <form className="w-full">
             <div className="grid grid-cols-1">
               <input
                 className="px-4 py-2 rounded border-none bg-gray mb-4 text-sm w-full"
