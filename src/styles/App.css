@@ -28,6 +28,8 @@
 .accordion-content{
   background: white !important;
 }
+
+
 @media screen and (min-width: 1440px) {
   /* .text-2xl {
     font-size: 40px !important;

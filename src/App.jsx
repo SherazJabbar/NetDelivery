@@ -16,6 +16,8 @@ import Promotions from "./layouts/Promotions";
 import EmailSignup from "./features/auth/authenticationFlows/EmailSignup";
 import CellphoneSignup from "./features/auth/authenticationFlows/CellphoneSignup";
 import PasswordLogin from "./features/auth/authenticationFlows/PasswordLogin";
+import NewSignupStep1 from "./features/auth/authenticationFlows/NewSignupStep1";
+import NewSignupStep2 from "./features/auth/authenticationFlows/NewSignupStep2";
 
 const App = () => {
   return (
@@ -38,6 +40,9 @@ const App = () => {
         <Route path="/email-signup" element={<EmailSignup />} />
         <Route path="/cellphone-signup" element={<CellphoneSignup />} />
         <Route path="/password-login" element={<PasswordLogin />} />
+        <Route path="/step-1" element={<NewSignupStep1 />} />
+        <Route path="/step-2" element={<NewSignupStep2 />} />
+        
       </Routes>
     </BrowserRouter>
   );
