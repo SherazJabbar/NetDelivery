@@ -14,7 +14,8 @@ import CardDetail from "./features/profile/payment/CardDetail";
 import PaymentOptions from "./features/cart/PaymentOptions";
 import Promotions from "./layouts/Promotions";
 import EmailSignup from "./features/auth/authenticationFlows/EmailSignup";
-
+import CellphoneSignup from "./features/auth/authenticationFlows/CellphoneSignup";
+import PasswordLogin from "./features/auth/authenticationFlows/PasswordLogin";
 
 const App = () => {
   return (
@@ -35,6 +36,8 @@ const App = () => {
         <Route path="/add-payment-options" element={<PaymentOptions />} />
         <Route path="/promotions" element={<Promotions />} />
         <Route path="/email-signup" element={<EmailSignup />} />
+        <Route path="/cellphone-signup" element={<CellphoneSignup />} />
+        <Route path="/password-login" element={<PasswordLogin />} />
       </Routes>
     </BrowserRouter>
   );

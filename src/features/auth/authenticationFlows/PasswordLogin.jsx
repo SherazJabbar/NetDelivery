@@ -1,7 +1,7 @@
 import logoImage from "../../../assets/net-delivery-logo.png";
-import React, { useState } from "react";
+import React from "react";
 
-const EmailSignup = () => {
+const PasswordLogin = () => {
   return (
     <div>
       {/* Navbar */}
@@ -13,43 +13,30 @@ const EmailSignup = () => {
       <div className="flex items-center justify-center bg-gray-100">
         <div className="flex flex-col items-center justify-center w-full md:w-1/2 xl:w-1/5 px-5 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
           <h1 className="text-xl font-semibold mb-4">
-            Enter the 4 digit code sent to you at
-            <div className="emailId text-lg font-medium">
-              testing@netdelivet.co.uk
-            </div>
+            Welcome Back , <span>Tatelo !</span>
           </h1>
+          <h1 className="emailId text-lg font-bold text">Not You?</h1>
+
           <form>
-            <div className="grid grid-cols-4 gap-x-3">
+            <div className="grid grid-cols-1">
               <input
                 className="px-4 py-2 rounded border-none bg-gray mb-4 w-full"
+                placeholder="Enter your password"
                 type="text"
               />
-              <input
-                className="px-4 py-2 rounded border-none bg-gray mb-4 w-full"
-                type="text"
-              />
-              <input
-                className="px-4 py-2 rounded border-none bg-gray mb-4 w-full"
-                type="text"
-              />
-              <input
-                className="px-4 py-2 rounded border-none bg-gray mb-4 w-full"
-                type="text"
-              />
-            </div>
-            <div>
-              <p className="text-left text-sm">
-                Tip: Make sure to recheck your inbox and spam folder
-              </p>
             </div>
           </form>
-          <div className="w-full">
-            <button className="w-max bg-primary text-secondary float-left py-2 px-4 rounded-full my-4">
-              Resend
+
+          <div className="w-full flex flex-col gap-3">
+            <button className="w-max bg-primary text-secondary float-left py-2 px-4 rounded-full ">
+              More Options
+            </button>
+
+            <button className="w-max bg-primary text-secondary float-left py-2 px-4 rounded-full">
+              Forgot Password
             </button>
           </div>
-
-          <div className="mb-4 w-full flex justify-between">
+          <div className="my-4 w-full flex justify-between">
             <button className="w-max bg-gray text-secondary text-sm  py-2 px-4 rounded-full my-4">
               Back
             </button>
@@ -64,4 +51,4 @@ const EmailSignup = () => {
   );
 };
 
-export default EmailSignup;
+export default PasswordLogin;
