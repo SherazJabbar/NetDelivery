@@ -11,11 +11,11 @@
   font-weight: 500;
 }
 
-.navbar-icon-color{
+.navbar-icon-color {
   filter: brightness(0) invert(1);
 }
 
-.delivery-card{
+.delivery-card {
   background: white !important;
 }
 
@@ -25,11 +25,24 @@
   overflow-y: scroll;
 }
 
-.accordion-content{
+.accordion-content {
   background: white !important;
 }
 
+.slick-slide{
+  padding-right: 50px !important;
+}
+.slick-prev::before, .slick-next::before{
+  color: black !important;
+}
 
+.carousel-img-1{
+  height: 212px;
+}
+
+.carousel-img-2 {
+  height: 100px;
+}
 @media screen and (min-width: 1440px) {
   /* .text-2xl {
     font-size: 40px !important;
@@ -47,22 +60,18 @@
     height: 360px;
   }
 
- .footer-height{
+  .footer-height {
     height: 100% !important;
   }
 }
 
-
 @media screen and (max-width: 1440px) {
-
   .footer-content {
     font-size: 16px;
     font-weight: 500;
   }
 }
 @media screen and (max-width: 1024px) {
-
-
   .footer-height {
     height: 100% !important;
   }

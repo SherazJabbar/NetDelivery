@@ -20,6 +20,7 @@ import NewSignupStep1 from "./features/auth/authenticationFlows/NewSignupStep1";
 import NewSignupStep2 from "./features/auth/authenticationFlows/NewSignupStep2";
 import TermsandConditions from "./features/auth/authenticationFlows/TermsandConditions";
 import DeliveryDetails from "./features/cart/DeliveryDetails";
+import HomePage from "./features/homePage/HomePage";
 const App = () => {
   return (
     <BrowserRouter>
@@ -45,6 +46,7 @@ const App = () => {
         <Route path="/step-2" element={<NewSignupStep2 />} />
         <Route path="/terms-and-conditions" element={<TermsandConditions />} />
         <Route path="/delivery-details" element={<DeliveryDetails />} />
+        <Route path="/home" element={<HomePage />} />
       </Routes>
     </BrowserRouter>
   );
