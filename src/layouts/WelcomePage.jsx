@@ -1,5 +1,8 @@
-import "../styles/App.css";
 import React, { useState } from "react";
+import { useNavigate, Link } from "react-router-dom";
+
+// assets
+import "../styles/App.css";
 import logoImage from "../assets/net-delivery-logo.png";
 import appleStore from "../assets/apple-store.png";
 import googlePlay from "../assets/google-play.png";
@@ -42,7 +45,7 @@ export const WelcomePage = () => {
                   alt="Sign In"
                 />
                 <span className="hidden md:inline-block text-secondary">
-                  Sign In
+                  <Link to="/signup">Sign In</Link>
                 </span>
               </button>
               <button className="bg-primary text-secondary px-4 py-3 rounded-full flex items-center text-sm font-bold">
@@ -52,7 +55,7 @@ export const WelcomePage = () => {
                   alt="Sign Up"
                 />
                 <span className="hidden md:inline-block text-white">
-                  Sign Up
+                  <Link to="/signup">Sign Up</Link>
                 </span>
               </button>
               <button
