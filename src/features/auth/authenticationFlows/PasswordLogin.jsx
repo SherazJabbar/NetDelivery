@@ -1,7 +1,11 @@
 import logoImage from "../../../assets/net-delivery-logo.png";
-import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const PasswordLogin = () => {
+  const navigate = useNavigate();
+  const navigateToSignIn = () => {
+    navigate("/signup");
+  };
   return (
     <div>
       {/* Navbar */}
@@ -11,16 +15,15 @@ const PasswordLogin = () => {
 
       {/* Auth Content */}
       <div className="flex items-center justify-center bg-gray-100">
-       
         <div className="flex flex-col imtems-inheirt md:items-center justify-center w-full md:w-1/2 lg:w-1/4 xl:w-1/5 px-5 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-           <div className="text-left">
-
-              <h1 className="text-xl font-semibold mb-4">
-            Welcome Back , <span>Tatelo !</span>
-          </h1>
-          <h1 className="emailId text-md underline font-bold text">Not You?</h1>
-           </div>
-        
+          <div className="text-left">
+            <h1 className="text-xl font-semibold mb-4">
+              Welcome Back , <span>Tatelo !</span>
+            </h1>
+            <h1 className="emailId text-md underline font-bold text">
+              Not You?
+            </h1>
+          </div>
 
           <form className="w-full">
             <div className="grid grid-cols-1">
@@ -42,7 +45,10 @@ const PasswordLogin = () => {
             </button>
           </div>
           <div className="my-4 w-full flex justify-between">
-            <button className="w-max bg-gray text-secondary text-xs font-semibold  py-2 px-4 rounded-full my-4">
+            <button
+              onClick={navigateToSignIn}
+              className="w-max bg-gray text-secondary text-xs font-semibold  py-2 px-4 rounded-full my-4"
+            >
               Back
             </button>
 

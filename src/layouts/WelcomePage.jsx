@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { useNavigate, Link } from "react-router-dom";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 // assets
 import "../styles/App.css";
@@ -18,6 +18,7 @@ import MenuIcon from "../assets/menu-icon.png";
 
 export const WelcomePage = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const navigate = useNavigate();
 
   const handleMenuClick = () => {
     setIsModalOpen(true);
@@ -29,6 +30,13 @@ export const WelcomePage = () => {
     document.body.style.overflow = "auto"; // Enable background scroll
   };
 
+  const navigateToSignUp = () => {
+    navigate("/signup");
+  };
+  const navigateToSignIn = () => {
+    navigate("/signup");
+  };
+
   return (
     <div>
       <div>
@@ -38,24 +46,30 @@ export const WelcomePage = () => {
               <img src={logoImage} alt="Logo" className="w-56 mr-2" />
             </div>
             <div className="flex space-x-4">
-              <button className="bg-white text-secondary px-4 py-3 rounded-full flex items-center text-sm font-bold">
+              <button
+                onClick={navigateToSignIn}
+                className="bg-white text-secondary px-4 py-3 rounded-full flex items-center text-sm font-bold"
+              >
                 <img
                   className="mr-2 h-auto md:h-4 xl:h-5"
                   src={SignInIcon}
                   alt="Sign In"
                 />
                 <span className="hidden md:inline-block text-secondary">
-                  <Link to="/signup">Sign In</Link>
+                  Sign In
                 </span>
               </button>
-              <button className="bg-primary text-secondary px-4 py-3 rounded-full flex items-center text-sm font-bold">
+              <button
+                onClick={navigateToSignUp}
+                className="bg-primary text-secondary px-4 py-3 rounded-full flex items-center text-sm font-bold"
+              >
                 <img
                   className="mr-2 h-auto md:h-4 xl:h-5"
                   src={SignUpIcon}
                   alt="Sign Up"
                 />
                 <span className="hidden md:inline-block text-white">
-                  <Link to="/signup">Sign Up</Link>
+                  Sign Up
                 </span>
               </button>
               <button
@@ -252,7 +266,10 @@ export const WelcomePage = () => {
             {/* Modal content */}
             <div className="flex flex-col gap-y-4">
               <div className="flex items-center justify-center">
-                <button className="bg-darkgray text-secondary font-medium px-4 py-3.5 rounded w-full flex items-center">
+                <button
+                  onClick={navigateToSignIn}
+                  className="bg-darkgray text-secondary font-medium px-4 py-3.5 rounded w-full flex items-center"
+                >
                   <img
                     className="mr-2 h-auto md:h-4 xl:h-5"
                     src={SignInIcon}
@@ -263,7 +280,10 @@ export const WelcomePage = () => {
               </div>
 
               <div className="flex items-center justify-center">
-                <button className="bg-primary text-white font-medium px-4 py-3.5 rounded w-full flex items-center">
+                <button
+                  onClick={navigateToSignUp}
+                  className="bg-primary text-white font-medium px-4 py-3.5 rounded w-full flex items-center"
+                >
                   <img
                     className="mr-2 h-auto md:h-4 xl:h-5"
                     src={SignUpIcon}
