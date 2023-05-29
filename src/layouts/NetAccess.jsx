@@ -3,7 +3,8 @@ import { useState } from "react";
 import DiscountIcon from "../assets/discounts-icon.png";
 import DeliveryManIcon from "../assets/delivery-man-icon.png";
 import ContractsIcon from "../assets/contract-icon.png";
-import PlusIcon from "../assets/plus-icon.png";
+import PlusIcon from "../assets/plus-icon.svg";
+import MinusIcon from "../assets/minus-icon.svg";
 
 const NetAccess = () => {
   const [accordionOpen, setaccordionOpen] = useState(false);
@@ -106,7 +107,7 @@ const NetAccess = () => {
                 >
                   <h3 className="text-xl font-medium">What is NetAccess?</h3>
 
-                  <img src={PlusIcon} className="w-6 h-6" />
+                  <img src={PlusIcon} className="w-4 h-4" />
                 </div>
                 {accordionOpen && (
                   <div className="px-4 pb-6 accordion-content mt-2 text-lg font-medium">
@@ -123,7 +124,7 @@ const NetAccess = () => {
                 >
                   <h3 className="text-xl font-medium">What is NetAccess?</h3>
 
-                  <img src={PlusIcon} className="w-6 h-6" />
+                  <img src={PlusIcon} className="w-4 h-4" />
                 </div>
                 {accordionOpen && (
                   <div className="px-4 pb-6 accordion-content mt-2 text-lg font-medium">
@@ -140,7 +141,7 @@ const NetAccess = () => {
                 >
                   <h3 className="text-xl font-medium">What is NetAccess?</h3>
 
-                  <img src={PlusIcon} className="w-6 h-6" />
+                  <img src={PlusIcon} className="w-4 h-4" />
                 </div>
                 {accordionOpen && (
                   <div className="px-4 pb-6 accordion-content mt-2 text-lg font-medium">
@@ -157,7 +158,7 @@ const NetAccess = () => {
                 >
                   <h3 className="text-xl font-medium">What is NetAccess?</h3>
 
-                  <img src={PlusIcon} className="w-6 h-6" />
+                  <img src={PlusIcon} className="w-4 h-4" />
                 </div>
                 {accordionOpen && (
                   <div className="px-4 pb-6 accordion-content mt-2 text-lg font-medium">
@@ -174,7 +175,7 @@ const NetAccess = () => {
                 >
                   <h3 className="text-xl font-medium">What is NetAccess?</h3>
 
-                  <img src={PlusIcon} className="w-6 h-6" />
+                  <img src={MinusIcon} className="w-4 h-4" />
                 </div>
                 {accordionOpen && (
                   <div className="px-4 pb-6 accordion-content mt-2 text-lg font-medium">
@@ -191,7 +192,7 @@ const NetAccess = () => {
                 >
                   <h3 className="text-xl font-medium">What is NetAccess?</h3>
 
-                  <img src={PlusIcon} className="w-6 h-6" />
+                  <img src={PlusIcon} className="w-4 h-4" />
                 </div>
                 {accordionOpen && (
                   <div className="px-4 pb-6 accordion-content mt-2 text-lg font-medium">

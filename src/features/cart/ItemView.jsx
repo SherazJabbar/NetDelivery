@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Navbar from "../../components/Navbar";
 import Food1 from "../../assets/food-1.jpg";
-import PlusIcon from "../../assets/plus-icon.png";
+import PlusIcon from "../../assets/plus-icon.svg";
 import CrossIcon from "../../assets/cross-icon.svg"
 
 export const ItemView = () => {
