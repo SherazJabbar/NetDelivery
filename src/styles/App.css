@@ -29,20 +29,87 @@
   background: white !important;
 }
 
-.slick-slide{
+.slick-slide {
   padding-right: 50px !important;
 }
-.slick-prev::before, .slick-next::before{
+.slick-prev::before,
+.slick-next::before {
   color: black !important;
 }
 
-.carousel-img-1{
+.carousel-img-1 {
   height: 212px;
 }
 
 .carousel-img-2 {
   height: 100px;
 }
+
+/********** Range Input Styles **********/
+/*Range Reset*/
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+/* Removes default focus */
+input[type="range"]:focus {
+  outline: none;
+}
+
+/***** Chrome, Safari, Opera and Edge Chromium styles *****/
+/* slider track */
+input[type="range"]::-webkit-slider-runnable-track {
+  background-color: #fcbc04 !important;
+  border-radius: 0.5rem;
+  height: 0.125rem;
+}
+
+/* slider thumb */
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  margin-top: -8px; /* Centers thumb on the track */
+
+  /*custom styles*/
+  background-color: #fcbc04 !important;
+  height: 1rem;
+  width: 1rem;
+}
+
+input[type="range"]:focus::-webkit-slider-thumb {
+  border: 1px solid #fcbc04 !important;
+  outline: 3px solid #fcbc04 !important;
+  outline-offset: 0.125rem;
+}
+
+/******** Firefox styles ********/
+/* slider track */
+input[type="range"]::-moz-range-track {
+  background-color: #fcbc04 !important;
+  border-radius: 0.5rem;
+  height: 0.5rem;
+}
+
+/* slider thumb */
+input[type="range"]::-moz-range-thumb {
+  border: none; /*Removes extra border that FF applies*/
+  border-radius: 0; /*Removes default border-radius that FF applies*/
+
+  /*custom styles*/
+  background-color: #fcbc04 !important;
+  height: 2rem;
+  width: 1rem;
+}
+
+input[type="range"]:focus::-moz-range-thumb {
+  border: 1px solid #fcbc04 !important;
+  outline: 3px solid #fcbc04 !important;
+  outline-offset: 0.125rem;
+}
+
 @media screen and (min-width: 1440px) {
   /* .text-2xl {
     font-size: 40px !important;
