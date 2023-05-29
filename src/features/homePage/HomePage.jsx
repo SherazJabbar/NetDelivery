@@ -5,6 +5,8 @@ import Food1 from "../../assets/food-1.jpg";
 import Food2 from "../../assets/food-2.jpg";
 import Food3 from "../../assets/food-3.jpg";
 import Food4 from "../../assets/food-4.jpg";
+import UpIcon from "../../assets/up-icon.svg";
+import DeliveryManIcon from "../../assets/delivery-man-icon.png";
 export const HomePage = () => {
   const carousel1Settings = {
     arrows: true,
@@ -48,16 +50,23 @@ export const HomePage = () => {
         <div className="grid grid-cols-12 mb-10 gap-x-16">
           <div className="col-span-3">
             <div className="flex flex-col justify-end h-full">
-              <div className="mx-3">
-                <p className="mb-1 text-sm">Now</p>
-                <p className="flex items-center text-sm">
-                  <span className="truncate">
-                    Freedom Road, Midrand, Street 1 Italy.
-                  </span>
-                  <button className="text-blue-700 ml-2 border-none bg-transparent">
-                    Change
-                  </button>
-                </p>
+              <div className="flex items-center mx-3">
+                <img
+                  className="w-6 h-6 mr-2"
+                  src={DeliveryManIcon}
+                  alt="Delivery Man Icon"
+                />
+                <div className="flex flex-col">
+                  <p className="mb-1 text-sm">Now</p>
+                  <div className="flex items-center text-sm">
+                    <span className="truncate w-1/2">
+                      Freedom Road, Midrand, Street 1 Italy.
+                    </span>
+                    <button className="text-blue-700 ml-2 border-none bg-transparent">
+                      Change
+                    </button>
+                  </div>
+                </div>
               </div>
             </div>
             <hr className="my-4 border-darkgray w-11/12"></hr>
@@ -200,7 +209,12 @@ export const HomePage = () => {
         <div className=" grid grid-cols-12 gap-x-16">
           <div className="col-span-3 ">
             <div className="grid grid-cols-1 gap-y-4 pb-10">
-              <h3 className="text-lg font-bold">Sort</h3>
+              <div className="">
+                <div className="flex items-center w-full justify-between">
+                  <h3 className="text-lg font-bold">Sort</h3>
+                  <img className="w-4 h-4 mr-2" src={UpIcon} alt="Up Icon" />
+                </div>
+              </div>
               <div>
                 <label className="flex items-center text-sm font-medium">
                   <input
@@ -246,7 +260,10 @@ export const HomePage = () => {
             <hr className="my-4 border-darkgray w-11/12"></hr>
 
             <div className="grid grid-cols-1 gap-y-4 pb-10">
-              <h3 className="text-lg font-bold">Price range</h3>
+              <div className="flex items-center w-full justify-between">
+                <h3 className="text-lg font-bold">Price Range</h3>
+                <img className="w-4 h-4 mr-2" src={UpIcon} alt="Up Icon" />
+              </div>
               <div className="relative">
                 <div className="flex justify-between">
                   <span className="text-sm font-medium text-primary">R20</span>
@@ -265,7 +282,10 @@ export const HomePage = () => {
             <hr className="my-4 border-darkgray w-11/12"></hr>
 
             <div className="grid grid-cols-1 gap-y-4 pb-10">
-              <h3 className="text-lg font-bold">Offers</h3>
+              <div className="flex items-center w-full justify-between">
+                <h3 className="text-lg font-bold">Offers</h3>
+                <img className="w-4 h-4 mr-2" src={UpIcon} alt="Up Icon" />
+              </div>
               <div>
                 <label className="flex items-center text-sm font-medium">
                   <input
@@ -325,7 +345,10 @@ export const HomePage = () => {
             <hr className="my-4 border-darkgray w-11/12"></hr>
 
             <div className="grid grid-cols-1 gap-y-4 pb-10">
-              <h3 className="text-lg font-bold">Dietary</h3>
+              <div className="flex items-center w-full justify-between">
+                <h3 className="text-lg font-bold">Dietary</h3>
+                <img className="w-4 h-4 mr-2" src={UpIcon} alt="Up Icon" />
+              </div>
               <div>
                 <label className="flex items-center text-sm font-medium">
                   <input
