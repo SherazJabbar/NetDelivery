@@ -31,8 +31,11 @@ module.exports = {
         gray: "#F2F2F2",
         graytext: "#94a3b8",
         darkgray: "#eeeeee",
+        grayish: "#40404F",
         green: "#03B003",
+        dullgreen: "#428443",
         red: "#FF0000",
+        darkblue: "#17226C",
       },
       fontFamily: {
         heading: ["Inter", "sans-serif"],
