@@ -45,7 +45,7 @@ export const HomePage = () => {
     <div>
       <Navbar />
       <div className="px-16 py-8">
-        <div className="grid grid-cols-12 mb-10 gap-x-8">
+        <div className="grid grid-cols-12 mb-10 gap-x-16">
           <div className="col-span-3">
             <div className="flex flex-col justify-end h-full">
               <div className="mx-3">
@@ -104,7 +104,7 @@ export const HomePage = () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-12 mb-10 gap-x-8">
+        <div className="grid grid-cols-12 mb-10 gap-x-16">
           <div className="col-span-3 ">
             <div className="flex flex-col justify-end h-full">
               <div className="flex  rounded-full bg-gray p-1 w-max">
@@ -197,40 +197,56 @@ export const HomePage = () => {
           </div>
         </div>
 
-        <div className=" grid grid-cols-12 gap-x-8">
+        <div className=" grid grid-cols-12 gap-x-16">
           <div className="col-span-3 ">
             <div className="grid grid-cols-1 gap-y-4 pb-10">
+              <h3 className="text-lg font-bold">Sort</h3>
               <div>
-                <label className="flex items-center  text-sm font-medium">
-                  <input type="radio" className="form-radio text-primary" />
+                <label className="flex items-center text-sm font-medium">
+                  <input
+                    type="radio"
+                    name="sort"
+                    className="form-radio text-primary"
+                  />
                   <span className="ml-4">Top Rated</span>
                 </label>
               </div>
-
               <div>
-                <label className="flex items-center  text-sm font-medium">
-                  <input type="radio" className="form-radio text-primary" />
+                <label className="flex items-center text-sm font-medium">
+                  <input
+                    type="radio"
+                    name="sort"
+                    className="form-radio text-primary"
+                  />
                   <span className="ml-4">Most Popular</span>
                 </label>
               </div>
-
               <div>
-                <label className="flex items-center  text-sm font-medium">
-                  <input type="radio" className="form-radio text-primary" />
+                <label className="flex items-center text-sm font-medium">
+                  <input
+                    type="radio"
+                    name="sort"
+                    className="form-radio text-primary"
+                  />
                   <span className="ml-4">Delivery Time</span>
                 </label>
               </div>
-
               <div>
-                <label className="flex items-center  text-sm font-medium">
-                  <input type="radio" className="form-radio text-primary" />
+                <label className="flex items-center text-sm font-medium">
+                  <input
+                    type="radio"
+                    name="sort"
+                    className="form-radio text-primary"
+                  />
                   <span className="ml-4">Distance</span>
                 </label>
               </div>
             </div>
+
             <hr className="my-4 border-darkgray w-11/12"></hr>
 
             <div className="grid grid-cols-1 gap-y-4 pb-10">
+              <h3 className="text-lg font-bold">Price range</h3>
               <div className="relative">
                 <div className="flex justify-between">
                   <span className="text-sm font-medium text-primary">R20</span>
@@ -249,79 +265,118 @@ export const HomePage = () => {
             <hr className="my-4 border-darkgray w-11/12"></hr>
 
             <div className="grid grid-cols-1 gap-y-4 pb-10">
+              <h3 className="text-lg font-bold">Offers</h3>
               <div>
-                <label className="flex items-center  text-sm font-medium">
-                  <input type="radio" className="form-radio text-primary" />
+                <label className="flex items-center text-sm font-medium">
+                  <input
+                    type="radio"
+                    className="form-radio text-primary"
+                    name="offer"
+                  />
                   <span className="ml-4">All Offers</span>
                 </label>
               </div>
 
               <div>
-                <label className="flex items-center  text-sm font-medium">
-                  <input type="radio" className="form-radio text-primary" />
+                <label className="flex items-center text-sm font-medium">
+                  <input
+                    type="radio"
+                    className="form-radio text-primary"
+                    name="offer"
+                  />
                   <span className="ml-4">One day only</span>
                 </label>
               </div>
 
               <div>
-                <label className="flex items-center  text-sm font-medium">
-                  <input type="radio" className="form-radio text-primary" />
+                <label className="flex items-center text-sm font-medium">
+                  <input
+                    type="radio"
+                    className="form-radio text-primary"
+                    name="offer"
+                  />
                   <span className="ml-4">Free delivery</span>
                 </label>
               </div>
 
               <div>
-                <label className="flex items-center  text-sm font-medium">
-                  <input type="radio" className="form-radio text-primary" />
+                <label className="flex items-center text-sm font-medium">
+                  <input
+                    type="radio"
+                    className="form-radio text-primary"
+                    name="offer"
+                  />
                   <span className="ml-4">Mean deals</span>
                 </label>
               </div>
 
               <div>
-                <label className="flex items-center  text-sm font-medium">
-                  <input type="radio" className="form-radio text-primary" />
+                <label className="flex items-center text-sm font-medium">
+                  <input
+                    type="radio"
+                    className="form-radio text-primary"
+                    name="offer"
+                  />
                   <span className="ml-4">Buy 1 get 1 free</span>
                 </label>
               </div>
             </div>
+
             <hr className="my-4 border-darkgray w-11/12"></hr>
 
             <div className="grid grid-cols-1 gap-y-4 pb-10">
+              <h3 className="text-lg font-bold">Dietary</h3>
               <div>
-                <label className="flex items-center  text-sm font-medium">
-                  <input type="radio" className="form-radio text-primary" />
+                <label className="flex items-center text-sm font-medium">
+                  <input
+                    type="radio"
+                    name="dietary"
+                    className="form-radio text-primary"
+                  />
                   <span className="ml-4">Halal</span>
                 </label>
               </div>
-
               <div>
-                <label className="flex items-center  text-sm font-medium">
-                  <input type="radio" className="form-radio text-primary" />
+                <label className="flex items-center text-sm font-medium">
+                  <input
+                    type="radio"
+                    name="dietary"
+                    className="form-radio text-primary"
+                  />
                   <span className="ml-4">Gluten free</span>
                 </label>
               </div>
-
               <div>
-                <label className="flex items-center  text-sm font-medium">
-                  <input type="radio" className="form-radio text-primary" />
+                <label className="flex items-center text-sm font-medium">
+                  <input
+                    type="radio"
+                    name="dietary"
+                    className="form-radio text-primary"
+                  />
                   <span className="ml-4">Vegan</span>
                 </label>
               </div>
-
               <div>
-                <label className="flex items-center  text-sm font-medium">
-                  <input type="radio" className="form-radio text-primary" />
+                <label className="flex items-center text-sm font-medium">
+                  <input
+                    type="radio"
+                    name="dietary"
+                    className="form-radio text-primary"
+                  />
                   <span className="ml-4">Vegetarian</span>
                 </label>
               </div>
               <div>
-                <label className="flex items-center  text-sm font-medium">
-                  <input type="radio" className="form-radio text-primary" />
+                <label className="flex items-center text-sm font-medium">
+                  <input
+                    type="radio"
+                    name="dietary"
+                    className="form-radio text-primary"
+                  />
                   <span className="ml-4">Organic</span>
                 </label>
               </div>
             </div>
-            <hr className="my-4 border-darkgray w-11/12"></hr>
           </div>
           <div className="col-span-9 justify-self-center md:justify-self-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-16">
