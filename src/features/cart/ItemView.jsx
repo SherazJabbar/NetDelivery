@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Navbar from "../../components/Navbar";
 import Food1 from "../../assets/food-1.jpg";
 import PlusIcon from "../../assets/plus-icon.png";
+import CrossIcon from "../../assets/cross-icon.svg"
 
 export const ItemView = () => {
   const [accordionOpen, setAccordionOpen] = useState(false);
@@ -165,7 +166,7 @@ export const ItemView = () => {
               className="absolute top-0 right-0 m-4 text-primary"
               onClick={closeModal}
             >
-              X
+              <img src={CrossIcon} className="w-4 h-4" />
             </button>
             <button className="rounded bg-primary text-white px-4 py-1 absolute bottom-2 left-1/2 transform -translate-x-1/2 w-11/12">
               Go to Checkout

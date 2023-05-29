@@ -21,6 +21,7 @@ import NewSignupStep2 from "./features/auth/authenticationFlows/NewSignupStep2";
 import TermsandConditions from "./features/auth/authenticationFlows/TermsandConditions";
 import DeliveryDetails from "./features/cart/DeliveryDetails";
 import HomePage from "./features/homePage/HomePage";
+import HomePageMenu from "./features/homePage/HomePageMenu";
 const App = () => {
   return (
     <BrowserRouter>
@@ -47,6 +48,7 @@ const App = () => {
         <Route path="/terms-and-conditions" element={<TermsandConditions />} />
         <Route path="/delivery-details" element={<DeliveryDetails />} />
         <Route path="/home" element={<HomePage />} />
+        <Route path="/home-page-menu" element={<HomePageMenu />} />
       </Routes>
     </BrowserRouter>
   );
