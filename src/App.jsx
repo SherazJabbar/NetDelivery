@@ -22,6 +22,7 @@ import TermsandConditions from "./features/auth/authenticationFlows/TermsandCond
 import DeliveryDetails from "./features/cart/DeliveryDetails";
 import HomePage from "./features/homePage/HomePage";
 import HomePageMenu from "./features/homePage/HomePageMenu";
+import ViewStore from "./features/profile/orders/ViewStore";
 const App = () => {
   return (
     <BrowserRouter>
@@ -49,6 +50,7 @@ const App = () => {
         <Route path="/delivery-details" element={<DeliveryDetails />} />
         <Route path="/home" element={<HomePage />} />
         <Route path="/home-page-menu" element={<HomePageMenu />} />
+        <Route path="/view-store" element={<ViewStore />} />
       </Routes>
     </BrowserRouter>
   );
