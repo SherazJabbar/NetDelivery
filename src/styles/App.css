@@ -1,6 +1,9 @@
 .cardHeight {
   height: 500px;
 }
+.disabled {
+  cursor: not-allowed;
+}
 
 .footer-height {
   height: 500px;
