@@ -173,7 +173,7 @@ export const Checkout = () => {
                       </div>
 
                       <div className="flex flex-col w-4/5">
-                        <h2 className="text-xs font-medium">Personal</h2>
+                        <h2 className="text-xs font-medium pl-2">Personal</h2>
                       </div>
                       <button className="rounded-full text-xs font-medium bg-gray w-14 h-8 flex items-center justify-center ml-auto flex-shrink-0">
                         Edit
