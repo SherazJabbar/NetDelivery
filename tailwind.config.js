@@ -36,6 +36,7 @@ module.exports = {
         dullgreen: "#428443",
         red: "#FF0000",
         darkblue: "#17226C",
+        dullyellow: "#FFCF70"
       },
       fontFamily: {
         heading: ["Inter", "sans-serif"],
