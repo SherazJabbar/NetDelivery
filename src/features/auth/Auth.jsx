@@ -3,12 +3,25 @@ import google from "../../assets/google.png";
 import apple from "../../assets/apple.png";
 import facebook from "../../assets/facebook.png";
 import { useNavigate } from "react-router-dom";
+import { useState } from "react";
 
 const Auth = () => {
   const navigate = useNavigate();
+  const [inputValue, setinputValue] = useState("");
+
+  const handleInputChange = (event) => {
+    const value = event.target.value;
+    setinputValue(value);
+  };
+
+  const isNumericInput = !isNaN(inputValue) && inputValue !== "";
 
   const navigateToPasswordLogin = () => {
-    navigate("/password-login");
+    if (isNumericInput) {
+      navigate("/password-login");
+    } else {
+      navigate("/password-login");
+    }
   };
 
   return (
@@ -24,15 +37,39 @@ const Auth = () => {
           <h1 className="text-xl font-semibold mb-4">
             What's your phone number or email?
           </h1>
-          <input
-            className="px-4 py-2 rounded border-none bg-gray mb-4 w-full"
-            type="text"
-            placeholder="Enter phone number or email"
-          />
+
+          <div>
+            {isNumericInput ? (
+              <div className="flex gap-x-4 mb-4">
+                <select className="px-4 py-2 rounded border-none bg-gray">
+                  <option value="US">US</option>
+                  <option value="UK">UK</option>
+                </select>
+                <input
+                  className="px-4 py-2 rounded border-none bg-gray w-full"
+                  type="text"
+                  placeholder="Enter Phone Number or Email"
+                  value={inputValue}
+                  onChange={handleInputChange}
+                />
+              </div>
+            ) : (
+              <input
+                className="px-6 py-2 rounded border-none bg-gray w-full"
+                type="text"
+                placeholder="Enter Phone Number"
+                value={inputValue}
+                onChange={handleInputChange}
+              />
+            )}
+          </div>
 
           <button
             onClick={navigateToPasswordLogin}
-            className="w-full bg-primary text-secondary py-2 rounded mb-4"
+            className={`w-full mt-3 bg-primary text-secondary py-2 rounded mb-4 ${
+              inputValue === "" ? "disabled" : ""
+            }`}
+            disabled={inputValue === ""}
           >
             Continue
           </button>
