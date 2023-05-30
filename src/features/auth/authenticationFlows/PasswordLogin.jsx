@@ -2,11 +2,18 @@ import logoImage from "../../../assets/net-delivery-logo.png";
 import RightArrow from "../../../assets/right-arrow.svg";
 import LeftArrow from "../../../assets/left-arrow.svg";
 import { useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { signIn } from "../../../store";
 
 const PasswordLogin = () => {
   const navigate = useNavigate();
+  const dispatch = useDispatch();
   const navigateToSignIn = () => {
     navigate("/signup");
+  };
+  const navigateToHomePage = () => {
+    dispatch(signIn());
+    navigate("/home");
   };
   return (
     <div>
@@ -54,7 +61,10 @@ const PasswordLogin = () => {
               <img src={LeftArrow} alt="Left Arrow" className="h-4 w-4 mr-2" />
             </button>
 
-            <button className="w-max bg-primary text-secondary text-xs font-semibold py-2 px-4 rounded-full my-4 flex items-center opacity-50">
+            <button
+              onClick={navigateToHomePage}
+              className="w-max bg-primary text-secondary text-xs font-semibold py-2 px-4 rounded-full my-4 flex items-center opacity-50"
+            >
               <span className="mr-2">Next</span>
               <img src={RightArrow} alt="Right Arrow" className="h-4 w-4" />
             </button>

@@ -4,12 +4,19 @@ import FoodImage2 from "../../assets/food-2.jpg";
 import FoodImage3 from "../../assets/food-3.jpg";
 import FoodImage4 from "../../assets/food-4.jpg";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { MapContainer, TileLayer, Marker } from "react-leaflet";
 
 export const PickupPage = () => {
+  const navigate = useNavigate();
   const [activeTab, setActiveTab] = useState("delivery");
+  const position = [51.505, -0.09];
 
   const handleTabClick = (tab) => {
     setActiveTab(tab);
+    if (tab === "delivery") {
+      navigate("/home");
+    }
   };
 
   return (
@@ -130,7 +137,18 @@ export const PickupPage = () => {
             </div>
           </div>
           <div className="w-full sm:w-1/2 xl:w-3/4  pl-4">
-            Second Part - Map{" "}
+            Map will be used here
+            {/* <MapContainer center={position} zoom={13} scrollWheelZoom={false}>
+              <TileLayer
+                attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+                url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+              />
+              <Marker position={position}>
+                <Popup>
+                  A pretty CSS3 popup. <br /> Easily customizable.
+                </Popup>
+              </Marker>
+            </MapContainer> */}
           </div>
         </div>
       </div>

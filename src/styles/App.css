@@ -5,6 +5,10 @@
   cursor: not-allowed;
 }
 
+.cursor {
+  cursor: pointer;
+}
+
 .footer-height {
   height: 500px;
 }

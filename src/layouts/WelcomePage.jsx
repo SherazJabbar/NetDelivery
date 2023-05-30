@@ -15,7 +15,7 @@ import CourierPartner from "../assets/courier-partner.png";
 import SignInIcon from "../assets/sign-in-icon.png";
 import SignUpIcon from "../assets/sign-up-icon.png";
 import MenuIcon from "../assets/menu-icon.png";
-import CrossIcon from "../assets/cross-icon.svg"
+import CrossIcon from "../assets/cross-icon.svg";
 
 export const WelcomePage = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -36,6 +36,9 @@ export const WelcomePage = () => {
   };
   const navigateToSignIn = () => {
     navigate("/signup");
+  };
+  const navigateToHomePage = () => {
+    navigate("/home");
   };
 
   return (
@@ -99,7 +102,10 @@ export const WelcomePage = () => {
                 placeholder="Enter your address"
                 className="px-4 py-2 w-full  lg:w-2/3 mb-6 lg:mb-0 border-none"
               />
-              <button className="bg-primary text-secondary font-medium px-4 py-2 w-full lg:w-auto">
+              <button
+                onClick={navigateToHomePage}
+                className="bg-primary text-secondary font-medium px-4 py-2 w-full lg:w-auto"
+              >
                 Order Now
               </button>
             </div>
@@ -320,7 +326,7 @@ export const WelcomePage = () => {
               className="absolute top-0 right-0 m-4 text-primary"
               onClick={closeModal}
             >
-               <img src={CrossIcon} className="w-4 h-4" />
+              <img src={CrossIcon} className="w-4 h-4" />
             </button>
           </div>
         </div>

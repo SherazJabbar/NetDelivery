@@ -5,8 +5,12 @@ import SignInIcon from "../assets/sign-in-icon.png";
 import SignUpIcon from "../assets/sign-up-icon.png";
 import MenuIcon from "../assets/menu-icon.png";
 import { useLocation } from "react-router-dom";
+import { showModal } from "../store";
+import { useDispatch } from "react-redux";
+
 export const Navbar = () => {
   const location = useLocation();
+  const dispatch = useDispatch();
   const isPickupRoute = location.pathname === "/pickup";
   const isOrdersRoute = location.pathname === "/orders";
   const showSearch =
@@ -17,6 +21,9 @@ export const Navbar = () => {
   const showLocation =
     location.pathname === "/favourites" || location.pathname === "/orders";
 
+  const handleHomePageMenu = () => {
+    dispatch(showModal());
+  };
   return (
     <div className="flex justify-between px-16 py-10 items-center">
       <div className="flex items-center">
@@ -109,7 +116,10 @@ export const Navbar = () => {
         )}
 
         {!showLocation && (
-          <button className="bg-primary text-white px-4 py-3 rounded-full flex items-center text-sm font-bold">
+          <button
+            onClick={handleHomePageMenu}
+            className="bg-primary text-white px-4 py-3 rounded-full flex items-center text-sm font-bold"
+          >
             <img
               className="mr-2 h-auto md:h-4 xl:h-5 navbar-icon-color"
               src={MenuIcon}

@@ -7,7 +7,14 @@ import Food3 from "../../assets/food-3.jpg";
 import Food4 from "../../assets/food-4.jpg";
 import UpIcon from "../../assets/up-icon.svg";
 import DeliveryManIcon from "../../assets/delivery-man-icon.png";
+import HomePageMenu from "./HomePageMenu";
+import { useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
+
 export const HomePage = () => {
+  const navigate = useNavigate();
+  const isModalOpen = useSelector((state) => state.modal);
+
   const carousel1Settings = {
     arrows: true,
     dots: false,
@@ -41,6 +48,9 @@ export const HomePage = () => {
 
   const handleTabClick = (tab) => {
     setActiveTab(tab);
+    if (tab === "pickup") {
+      navigate("/pickup");
+    }
   };
 
   return (
@@ -478,6 +488,7 @@ export const HomePage = () => {
           </div>
         </div>
       </div>
+      {isModalOpen && <HomePageMenu />}
     </div>
   );
 };
