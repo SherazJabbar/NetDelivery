@@ -1,7 +1,6 @@
 import logoImage from "../../../assets/net-delivery-logo.png";
 import RightArrow from "../../../assets/right-arrow.svg";
 import LeftArrow from "../../../assets/left-arrow.svg";
-import React from "react";
 
 const NewSignupStep1 = () => {
   return (
