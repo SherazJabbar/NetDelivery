@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import locationIcon from "../../assets/location-pin.png";
 import editIcon from "../../assets/pencil.png";
+import CrossIcon from "../../assets/cross-icon.svg"
 
 const DeliverToAddress = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -27,7 +28,7 @@ const DeliverToAddress = () => {
           <div className="bg-white p-4 w-11/12 sm:w-1/2 xl:w-1/4">
             <div>
               <button className="text-primary pb-4" onClick={closeModal}>
-                X
+                  <img src={CrossIcon} className="w-4 h-4" />
               </button>
             </div>
             <div className="mb-2">
