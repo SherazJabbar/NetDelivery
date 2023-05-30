@@ -1,4 +1,6 @@
 import logoImage from "../../../assets/net-delivery-logo.png";
+import RightArrow from "../../../assets/right-arrow.svg";
+import LeftArrow from "../../../assets/left-arrow.svg";
 import { useNavigate } from "react-router-dom";
 
 const PasswordLogin = () => {
@@ -46,14 +48,15 @@ const PasswordLogin = () => {
           </div>
           <div className="my-4 w-full flex justify-between">
             <button
+              className="w-max bg-gray text-secondary text-xs font-semibold py-2 px-4 rounded-full my-4 flex items-center"
               onClick={navigateToSignIn}
-              className="w-max bg-gray text-secondary text-xs font-semibold  py-2 px-4 rounded-full my-4"
             >
-              Back
+              <img src={LeftArrow} alt="Left Arrow" className="h-4 w-4 mr-2" />
             </button>
 
-            <button className="w-max bg-primary text-secondary text-xs font-semibold py-2 px-4 rounded-full my-4">
-              Next
+            <button className="w-max bg-primary text-secondary text-xs font-semibold py-2 px-4 rounded-full my-4 flex items-center opacity-50">
+              <span className="mr-2">Next</span>
+              <img src={RightArrow} alt="Right Arrow" className="h-4 w-4" />
             </button>
           </div>
         </div>

@@ -1,4 +1,7 @@
 import logoImage from "../../../assets/net-delivery-logo.png";
+import RightArrow from "../../../assets/right-arrow.svg";
+import LeftArrow from "../../../assets/left-arrow.svg";
+import TermsAndConditions from "../../../assets/terms-and-conditions.svg";
 import React from "react";
 
 const TermsandConditions = () => {
@@ -13,8 +16,12 @@ const TermsandConditions = () => {
       <div className="flex items-center justify-center bg-gray-100">
         <div className="flex flex-col items-center justify-center w-full sm:w-1/2 lg:w-1/4 xl:w-1/5 px-5 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
           <div className="flex">
-            <img src="" alt="terms-and-cond" />
-            <h1 className="text-sm font-medium pl-4 mb-4 leading-6 text-left">
+            <img
+              src={TermsAndConditions}
+              alt="terms-and-cond"
+              className="w-16 h-16"
+            />
+            <h1 className="text-md font-semibold pl-4 mb-4 leading-6 text-left">
               Accept NetDelivery's Terms & Review Privacy Notice
             </h1>
           </div>
@@ -44,13 +51,14 @@ const TermsandConditions = () => {
               className="rounded border-gray-300 text-primary focus:ring-primary"
             />
           </div>
-          <div className=" w-full flex justify-between">
-            <button className="w-max bg-gray text-secondary text-xs font-semibold  py-2 px-4 rounded my-4">
-              Back
+          <div className="w-full flex justify-between">
+            <button className="w-max bg-gray text-secondary text-xs font-semibold py-2 px-4 rounded-full my-4 flex items-center">
+              <img src={LeftArrow} alt="Left Arrow" className="h-4 w-4 mr-2" />
             </button>
 
-            <button className="w-max bg-primary text-secondary text-xs font-semibold py-2 px-4 rounded-full my-4">
-              Next
+            <button className="w-max bg-primary text-secondary text-xs font-semibold py-2 px-4 rounded-full my-4 flex items-center opacity-50">
+              <span className="mr-2">Next</span>
+              <img src={RightArrow} alt="Right Arrow" className="h-4 w-4" />
             </button>
           </div>
         </div>

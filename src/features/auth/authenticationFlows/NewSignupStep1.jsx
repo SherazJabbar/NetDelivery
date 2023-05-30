@@ -1,4 +1,6 @@
 import logoImage from "../../../assets/net-delivery-logo.png";
+import RightArrow from "../../../assets/right-arrow.svg";
+import LeftArrow from "../../../assets/left-arrow.svg";
 import React from "react";
 
 const NewSignupStep1 = () => {
@@ -11,10 +13,8 @@ const NewSignupStep1 = () => {
 
       {/* Auth Content */}
       <div className="flex items-center justify-center bg-gray-100">
-       
         <div className="flex flex-col md:items-center justify-center w-full sm:w-1/2 lg:w-1/4 xl:w-1/5 px-5 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-        <h1 className="text-xl font-semibold mb-4">What's your name?</h1>
-        
+          <h1 className="text-xl font-semibold mb-4">What's your name?</h1>
 
           <form className="w-full">
             <div className="grid grid-cols-1">
@@ -26,14 +26,14 @@ const NewSignupStep1 = () => {
             </div>
           </form>
 
-       
           <div className="my-4 w-full flex justify-between">
-            <button className="w-max bg-gray text-secondary text-xs font-semibold  py-2 px-4 rounded-full my-4">
-              Back
+            <button className="w-max bg-gray text-secondary text-xs font-semibold py-2 px-4 rounded-full my-4 flex items-center">
+              <img src={LeftArrow} alt="Left Arrow" className="h-4 w-4 mr-2" />
             </button>
 
-            <button className="w-max bg-primary text-secondary text-xs font-semibold py-2 px-4 rounded-full my-4">
-              Next
+            <button className="w-max bg-primary text-secondary text-xs font-semibold py-2 px-4 rounded-full my-4 flex items-center opacity-50">
+              <span className="mr-2">Next</span>
+              <img src={RightArrow} alt="Right Arrow" className="h-4 w-4" />
             </button>
           </div>
         </div>
