@@ -1,22 +1,32 @@
 import Navbar from "../../components/Navbar";
 import Food1 from "../../assets/food-1.jpg";
 import LocationIcon from "../../assets/location-pin.png";
+import ManIcon from "../../assets/man.svg";
+import PromoIcon from "../../assets/promo-code.svg";
+import ProfileIcon from "../../assets/profile.svg";
+import BusinessIcon from "../../assets/business.svg";
 import { useState } from "react";
 
 export const Checkout = () => {
-  const [activeTab, setActiveTab] = useState("delivery");
+const [activeDeliveryTab, setActiveDeliveryTab] = useState("delivery");
+const [activeProfileTab, setActiveProfileTab] = useState("profile");
 
-  const [accordionOpen, setAccordionOpen] = useState(false);
+const [accordionOpen, setAccordionOpen] = useState(false);
 
-  const toggleAccordion = () => {
-    setAccordionOpen(!accordionOpen);
-  };
+const toggleAccordion = () => {
+  setAccordionOpen(!accordionOpen);
+};
 
-  const [isModalOpen, setIsModalOpen] = useState(false);
+const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const handleTabClick = (tab) => {
-    setActiveTab(tab);
-  };
+const handleDeliveryTabClick = (tab) => {
+  setActiveDeliveryTab(tab);
+};
+
+const handleProfileTabClick = (tab) => {
+  setActiveProfileTab(tab);
+};
+
 
   return (
     <div>
@@ -42,21 +52,21 @@ export const Checkout = () => {
                   <div className="flex items-center rounded-full bg-gray p-1">
                     <button
                       className={`${
-                        activeTab === "delivery"
+                        activeDeliveryTab === "delivery"
                           ? "bg-primary text-white"
                           : "bg-gray text-black"
                       } px-3 py-1 rounded-full text-xs font-medium`}
-                      onClick={() => handleTabClick("delivery")}
+                      onClick={() => handleDeliveryTabClick("delivery")}
                     >
                       Delivery
                     </button>
                     <button
                       className={`${
-                        activeTab === "pickup"
+                        activeDeliveryTab === "pickup"
                           ? "bg-primary text-white"
                           : "bg-gray text-black"
                       } px-3 py-1 rounded-full text-xs font-medium`}
-                      onClick={() => handleTabClick("pickup")}
+                      onClick={() => handleDeliveryTabClick("pickup")}
                     >
                       Pickup
                     </button>
@@ -77,7 +87,7 @@ export const Checkout = () => {
                           153 Walton Ave, 64 umthunzi view, Carlswald, Midrand
                         </p>
                       </div>
-                      <button className="rounded-full text-xs font-medium bg-gray w-9 h-9 flex items-center justify-center ml-auto flex-shrink-0">
+                      <button className="rounded-full text-xs font-medium bg-gray w-14 h-8 flex items-center justify-center ml-auto flex-shrink-0">
                         Edit
                       </button>
                     </div>
@@ -87,7 +97,7 @@ export const Checkout = () => {
                   <div className="grid grid-cols-1 gap-4">
                     <div className="flex items-center">
                       <img
-                        src={LocationIcon}
+                        src={ManIcon}
                         alt="Location"
                         className="w-4 h-4 mr-2"
                       />
@@ -99,7 +109,7 @@ export const Checkout = () => {
                           Call when at the security gate
                         </p>
                       </div>
-                      <button className="rounded-full text-xs font-medium bg-gray w-9 h-9 flex items-center justify-center ml-auto flex-shrink-0">
+                      <button className="rounded-full text-xs font-medium bg-gray w-14 h-8 flex items-center justify-center ml-auto flex-shrink-0">
                         Edit
                       </button>
                     </div>
@@ -132,15 +142,33 @@ export const Checkout = () => {
                 <div className="grid grid-cols-1 gap-2 my-2">
                   <div className="grid grid-cols-1 gap-4">
                     <div className="flex items-center">
-                      <img
-                        src={LocationIcon}
-                        alt="Location"
-                        className="w-4 h-4 mr-2"
-                      />
+                     <div className="flex items-center bg-gray rounded-full p-1">
+  <button
+    className={`${
+      activeProfileTab === "profile"
+        ? "bg-primary text-white"
+        : "bg-gray text-black"
+    } px-3 py-1 rounded-full text-xs font-medium flex items-center`}
+    onClick={() => handleProfileTabClick("profile")}
+  >
+    <img src={ProfileIcon} alt="Profile Icon" className="h-4 w-4 mr-2 filter invert" />
+  </button>
+  <button
+    className={`${
+      activeProfileTab === "business"
+        ? "bg-primary text-white"
+        : "bg-gray text-black"
+    } px-3 py-1 rounded-full text-xs font-medium flex items-center`}
+    onClick={() => handleProfileTabClick("business")}
+  >
+    <img src={BusinessIcon} alt="Business Icon" className="h-4 w-4 mr-2 filter brightness-0" />
+  </button>
+</div>
+
                       <div className="flex flex-col w-4/5">
                         <h2 className="text-xs font-medium">Personal</h2>
                       </div>
-                      <button className="rounded-full text-xs font-medium bg-gray w-9 h-9 flex items-center justify-center ml-auto flex-shrink-0">
+                      <button className="rounded-full text-xs font-medium bg-gray w-14 h-8 flex items-center justify-center ml-auto flex-shrink-0">
                         Edit
                       </button>
                     </div>
@@ -150,14 +178,14 @@ export const Checkout = () => {
                   <div className="grid grid-cols-1 gap-4">
                     <div className="flex items-center">
                       <img
-                        src={LocationIcon}
+                        src={PromoIcon}
                         alt="Location"
-                        className="w-4 h-4 mr-2"
+                        className="w-4 h-4 mr-2 filter brightness-0"
                       />
                       <div className="flex flex-col w-4/5">
                         <h2 className="text-xs font-medium">Add Promo Code</h2>
                       </div>
-                      <button className="rounded-full text-xs font-medium bg-gray w-9 h-9 flex items-center justify-center ml-auto flex-shrink-0">
+                      <button className="rounded-full text-xs font-medium bg-gray w-14 h-8 flex items-center justify-center ml-auto flex-shrink-0">
                         Add
                       </button>
                     </div>
