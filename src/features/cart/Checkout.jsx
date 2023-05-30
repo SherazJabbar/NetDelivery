@@ -8,25 +8,24 @@ import BusinessIcon from "../../assets/business.svg";
 import { useState } from "react";
 
 export const Checkout = () => {
-const [activeDeliveryTab, setActiveDeliveryTab] = useState("delivery");
-const [activeProfileTab, setActiveProfileTab] = useState("profile");
+  const [activeDeliveryTab, setActiveDeliveryTab] = useState("delivery");
+  const [activeProfileTab, setActiveProfileTab] = useState("profile");
 
-const [accordionOpen, setAccordionOpen] = useState(false);
+  const [accordionOpen, setAccordionOpen] = useState(false);
 
-const toggleAccordion = () => {
-  setAccordionOpen(!accordionOpen);
-};
+  const toggleAccordion = () => {
+    setAccordionOpen(!accordionOpen);
+  };
 
-const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
-const handleDeliveryTabClick = (tab) => {
-  setActiveDeliveryTab(tab);
-};
+  const handleDeliveryTabClick = (tab) => {
+    setActiveDeliveryTab(tab);
+  };
 
-const handleProfileTabClick = (tab) => {
-  setActiveProfileTab(tab);
-};
-
+  const handleProfileTabClick = (tab) => {
+    setActiveProfileTab(tab);
+  };
 
   return (
     <div>
@@ -142,28 +141,36 @@ const handleProfileTabClick = (tab) => {
                 <div className="grid grid-cols-1 gap-2 my-2">
                   <div className="grid grid-cols-1 gap-4">
                     <div className="flex items-center">
-                     <div className="flex items-center bg-gray rounded-full p-1">
-  <button
-    className={`${
-      activeProfileTab === "profile"
-        ? "bg-primary text-white"
-        : "bg-gray text-black"
-    } px-3 py-1 rounded-full text-xs font-medium flex items-center`}
-    onClick={() => handleProfileTabClick("profile")}
-  >
-    <img src={ProfileIcon} alt="Profile Icon" className="h-4 w-4 mr-2 filter invert" />
-  </button>
-  <button
-    className={`${
-      activeProfileTab === "business"
-        ? "bg-primary text-white"
-        : "bg-gray text-black"
-    } px-3 py-1 rounded-full text-xs font-medium flex items-center`}
-    onClick={() => handleProfileTabClick("business")}
-  >
-    <img src={BusinessIcon} alt="Business Icon" className="h-4 w-4 mr-2 filter brightness-0" />
-  </button>
-</div>
+                      <div className="flex items-center bg-gray rounded-full p-1">
+                        <button
+                          className={`${
+                            activeProfileTab === "profile"
+                              ? "bg-primary text-white"
+                              : "bg-gray text-black"
+                          } px-3 py-1 rounded-full text-xs font-medium flex items-center`}
+                          onClick={() => handleProfileTabClick("profile")}
+                        >
+                          <img
+                            src={ProfileIcon}
+                            alt="Profile Icon"
+                            className="h-4 w-4 mr-2 filter invert"
+                          />
+                        </button>
+                        <button
+                          className={`${
+                            activeProfileTab === "business"
+                              ? "bg-primary text-white"
+                              : "bg-gray text-black"
+                          } px-3 py-1 rounded-full text-xs font-medium flex items-center`}
+                          onClick={() => handleProfileTabClick("business")}
+                        >
+                          <img
+                            src={BusinessIcon}
+                            alt="Business Icon"
+                            className="h-4 w-4 mr-2 filter brightness-0"
+                          />
+                        </button>
+                      </div>
 
                       <div className="flex flex-col w-4/5">
                         <h2 className="text-xs font-medium">Personal</h2>
