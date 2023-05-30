@@ -1,5 +1,12 @@
 import React, { useState } from "react";
-
+import CrossIcon from "../../assets/cross-icon.svg";
+import VisaCard from "../../assets/visa.svg";
+import Mastercard from "../../assets/mastercard.png";
+import CashIcon from "../../assets/cash-icon.svg";
+import TickIcon from "../../assets/tick-icon.svg";
+import PlusIcon from "../../assets/plus-icon.svg";
+import ProfileIcon from "../../assets/profile.svg";
+import BusinessIcon from "../../assets/business.svg";
 const PaymentOptions = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -25,16 +32,26 @@ const PaymentOptions = () => {
           <div className="bg-white p-4 h-max w-11/12 md:w-2/6 rounded-md">
             <div>
               <button className="text-primary" onClick={closeModal}>
-                X
+                <img src={CrossIcon} className="w-4 h-4" />
               </button>
             </div>
             <h2 className="text-xl font-bold py-4">Payment Options</h2>
 
             <div className="flex flex-col sm:flex-row mb-8 gap-3">
-              <button className="rounded-full bg-primary text-white text-md px-4 py-1">
+              <button className="rounded-full bg-primary text-white text-md px-4 py-1 flex items-center">
+                <img
+                  src={ProfileIcon}
+                  alt="Profile Icon"
+                  className="h-4 w-4 mr-2 filter invert"
+                />
                 Personal
               </button>
-              <button className="rounded-full bg-gray text-secondary text-md px-4 py-1">
+              <button className="rounded-full bg-gray text-secondary text-md px-4 py-1 flex items-center">
+                <img
+                  src={BusinessIcon}
+                  alt="Business Icon"
+                  className="h-4 w-4 mr-2 filter brightness-0"
+                />
                 Business
               </button>
             </div>
@@ -43,7 +60,7 @@ const PaymentOptions = () => {
               <div className="flex items-center">
                 <div className="w-8 h-8 mr-2">
                   <img
-                    src="path_to_icon"
+                    src={VisaCard}
                     alt=""
                     className="w-full h-full object-contain"
                   />
@@ -52,14 +69,14 @@ const PaymentOptions = () => {
                   Visa -<span>&nbsp;</span> <span>1945</span>
                 </p>
                 <div className="ml-auto">
-                  <img src=" " alt="" className="w-4 h-4" />
+                  <img src={TickIcon} alt="" className="w-4 h-4" />
                 </div>
               </div>
               <hr className="my-2 border-darkgray" />
               <div className="flex items-center">
                 <div className="w-8 h-8 mr-2">
                   <img
-                    src="path_to_icon"
+                    src={Mastercard}
                     alt=""
                     className="w-full h-full object-contain"
                   />
@@ -68,14 +85,14 @@ const PaymentOptions = () => {
                   Mastercard -<span>&nbsp;</span> <span>1945</span>
                 </p>
                 <div className="ml-auto">
-                  <img src=" " alt="" className="w-4 h-4" />
+                  <img src={TickIcon} alt="" className="w-4 h-4" />
                 </div>
               </div>
               <hr className="my-2 border-darkgray" />
               <div className="flex items-center">
                 <div className="w-8 h-8 mr-2">
                   <img
-                    src="path_to_icon"
+                    src={CashIcon}
                     alt=""
                     className="w-full h-full object-contain"
                   />
@@ -84,12 +101,13 @@ const PaymentOptions = () => {
                   Cash <span>&nbsp;</span> <span></span>
                 </p>
                 <div className="ml-auto">
-                  <img src=" " alt="" className="w-4 h-4" />
+                  <img src={TickIcon} alt="" className="w-4 h-4" />
                 </div>
               </div>
               <hr className="my-2 border-darkgray" />
-              <div>
-                <h2 className="text-xs font-semibold ml-2 py-4">
+              <div className="flex items-center">
+                <img src={PlusIcon} alt="Plus Icon" className="h-3 w-3 mr-2" />
+                <h2 className="text-xs font-semibold py-4">
                   Add Payment Method
                 </h2>
               </div>
