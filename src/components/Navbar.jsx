@@ -6,12 +6,13 @@ import CartBlack from "../assets/cart-black.svg";
 import SignInIcon from "../assets/sign-in.svg";
 import SignUpIcon from "../assets/sign-up.svg";
 import MenuIcon from "../assets/menu.svg";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { showModal } from "../store";
 import { useDispatch } from "react-redux";
 
 export const Navbar = () => {
   const location = useLocation();
+  const navigate=useNavigate();
   const dispatch = useDispatch();
   const isPickupRoute = location.pathname === "/pickup";
   const isOrdersRoute = location.pathname === "/orders";
@@ -43,6 +44,10 @@ export const Navbar = () => {
   const handleHomePageMenu = () => {
     dispatch(showModal());
   };
+
+  const handleCart=()=>{
+    navigate("/checkout")
+  }
 
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -174,7 +179,7 @@ export const Navbar = () => {
           )}
 
           {cartWithOrder && (
-            <button className="bg-primary text-white px-4 py-3 rounded-full flex items-center text-sm font-bold">
+            <button onClick={handleCart} className="bg-primary text-white px-4 py-3 rounded-full flex items-center text-sm font-bold">
               <img
                 className="mr-2 w-4 h-4 navbar-icon-color"
                 src={CartIcon}
