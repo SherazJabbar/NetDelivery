@@ -57,7 +57,7 @@ export const ViewStore = () => {
             </div>
           </div>
           <div className="col-span-1 lg:col-span-2">
-            <div className="border border-graytext rounded-full py-3 px-6 text-graytext w-full lg:w-3/4 text-center float-right">
+            <div className="border border-graytext rounded-full py-3 px-6 text-graytext w-full text-center float-right">
               <p className="text-lg font-bold">Delivery</p>
               <p className="text-sm ">
                 Opens at <span>7:00 AM</span>
