@@ -20,7 +20,7 @@ export const ViewStore = () => {
     <div>
       <Navbar />
       <div className="relative h-64">
-        <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+        <div className="absolute inset-0 bg-black bg-opacity-75 flex items-center justify-center">
           <p className="text-white text-center text-xl">Too far to deliver</p>
         </div>
         <img
