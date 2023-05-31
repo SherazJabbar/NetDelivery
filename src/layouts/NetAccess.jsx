@@ -20,7 +20,7 @@ const NetAccess = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 2xl:gap-20 py-10">
           {/* Card 1 */}
           <div className="bg-green text-white rounded-lg p-4 min-h-200 sm:min-h-250 w-full xl:w-8/12 flex flex-col justify-center">
-            <div className="text-xl font-medium">
+            <div className="text-md md:text-xl font-medium">
               <div className="mb-2">
                 You get 30% OFF 3 meals orders and free delivery. All 3 meals
                 must be under 100.
@@ -28,14 +28,14 @@ const NetAccess = () => {
               <div className="mb-2">R100/pm</div>
             </div>
 
-            <button className="bg-white text-secondary px-4 py-2 rounded-full w-max mt-2 font-medium">
+            <button className="bg-white text-secondary px-2 sm:px-4 py-2 rounded-full w-max mt-2 font-medium">
               Subscribe now
             </button>
           </div>
 
           {/* Card 2 */}
           <div className="bg-red text-white rounded-lg p-4 min-h-200 sm:min-h-250 w-full xl:w-8/12  flex flex-col justify-center">
-            <div className="text-xl font-medium">
+            <div className="text-md md:text-xl font-medium">
               <div className="mb-2">
                 You get 50% OFF 5 meals orders and free delivery. All 5 meals
                 must be under R250.
@@ -43,14 +43,14 @@ const NetAccess = () => {
               <div className="mb-2">R100/pm</div>
             </div>
 
-            <button className="bg-white text-secondary px-4 py-2 rounded-full w-max mt-2 font-medium">
+            <button className="bg-white text-secondary px-2 sm:px-4 py-2 rounded-full w-max mt-2 font-medium">
               Subscribe now
             </button>
           </div>
 
           {/* Card 3 */}
           <div className="bg-primary text-white rounded-lg p-4 min-h-200 sm:min-h-250 w-full xl:w-8/12  flex flex-col justify-center">
-            <div className="text-xl font-medium">
+            <div className="text-md md:text-xl font-medium">
               <div className="mb-2">
                 You get 70% OFF 10 meals orders and free delivery. All 10 meals
                 must be under R500.
@@ -58,7 +58,7 @@ const NetAccess = () => {
               <div className="mb-2">R500/pm</div>
             </div>
 
-            <button className="bg-white text-secondary px-4 py-2 rounded-full w-max mt-2 font-medium">
+            <button className="bg-white text-secondary px-2 sm:px-4 py-2 rounded-full w-max mt-2 font-medium">
               Subscribe now
             </button>
           </div>
@@ -105,7 +105,9 @@ const NetAccess = () => {
                   className=" py-6 px-4 flex items-center justify-between cursor-pointer"
                   onClick={toggleAccordion1}
                 >
-                  <h3 className="text-xl font-medium">What is NetAccess?</h3>
+                  <h3 className="text-md md:text-xl font-medium">
+                    What is NetAccess?
+                  </h3>
 
                   <img src={PlusIcon} className="w-4 h-4" />
                 </div>
@@ -122,7 +124,9 @@ const NetAccess = () => {
                   className=" py-6 px-4 flex items-center justify-between cursor-pointer"
                   onClick={toggleAccordion1}
                 >
-                  <h3 className="text-xl font-medium">What is NetAccess?</h3>
+                  <h3 className="text-md md:text-xl font-medium">
+                    What is NetAccess?
+                  </h3>
 
                   <img src={PlusIcon} className="w-4 h-4" />
                 </div>
@@ -139,7 +143,9 @@ const NetAccess = () => {
                   className=" py-6 px-4 flex items-center justify-between cursor-pointer"
                   onClick={toggleAccordion1}
                 >
-                  <h3 className="text-xl font-medium">What is NetAccess?</h3>
+                  <h3 className="text-md md:text-xl font-medium">
+                    What is NetAccess?
+                  </h3>
 
                   <img src={PlusIcon} className="w-4 h-4" />
                 </div>
@@ -156,7 +162,9 @@ const NetAccess = () => {
                   className=" py-6 px-4 flex items-center justify-between cursor-pointer"
                   onClick={toggleAccordion1}
                 >
-                  <h3 className="text-xl font-medium">What is NetAccess?</h3>
+                  <h3 className="text-md md:text-xl font-medium">
+                    What is NetAccess?
+                  </h3>
 
                   <img src={PlusIcon} className="w-4 h-4" />
                 </div>
@@ -173,7 +181,9 @@ const NetAccess = () => {
                   className=" py-6 px-4 flex items-center justify-between cursor-pointer"
                   onClick={toggleAccordion1}
                 >
-                  <h3 className="text-xl font-medium">What is NetAccess?</h3>
+                  <h3 className="text-md md:text-xl font-medium">
+                    What is NetAccess?
+                  </h3>
 
                   <img src={MinusIcon} className="w-4 h-4" />
                 </div>
@@ -190,7 +200,9 @@ const NetAccess = () => {
                   className=" py-6 px-4 flex items-center justify-between cursor-pointer"
                   onClick={toggleAccordion1}
                 >
-                  <h3 className="text-xl font-medium">What is NetAccess?</h3>
+                  <h3 className="text-md md:text-xl font-medium">
+                    What is NetAccess?
+                  </h3>
 
                   <img src={PlusIcon} className="w-4 h-4" />
                 </div>

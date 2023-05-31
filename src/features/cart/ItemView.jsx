@@ -28,7 +28,7 @@ export const ItemView = () => {
     <div>
       <Navbar />
       <div className="px-16 py-8 mt-32">
-        <div className="w-full md:w-1/2 mx-auto">
+        <div className="w-full md:w-3/4 lg:w-1/2  mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div>
               <img

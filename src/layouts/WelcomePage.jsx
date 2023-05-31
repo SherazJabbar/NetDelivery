@@ -70,7 +70,7 @@ export const WelcomePage = () => {
             className="bg-white text-secondary px-4 py-3 shadow-md rounded-full flex items-center text-sm font-bold"
           >
             <img className="mr-2 h-4 w-4" src={SignInIcon} alt="Sign In" />
-            <span className="hidden md:inline-block text-secondary">
+            <span className="hidden lg:inline-block text-secondary">
               Sign In
             </span>
           </button>
@@ -79,14 +79,14 @@ export const WelcomePage = () => {
             className="bg-primary text-secondary shadow-md px-4 py-3 rounded-full flex items-center text-sm font-bold"
           >
             <img className="mr-2 h-4 w-4" src={SignUpIcon} alt="Sign Up" />
-            <span className="hidden md:inline-block text-white">Sign Up</span>
+            <span className="hidden lg:inline-block text-white">Sign Up</span>
           </button>
           <button
             className="bg-primary text-secondary px-4 py-3 shadow-md rounded-full flex items-center text-sm font-bold"
             onClick={handleMenuClick}
           >
             <img className="mr-2 h-4 w-4" src={MenuIcon} alt="Menu" />
-            <span className="hidden md:inline-block text-white">Menu</span>
+            <span className="hidden lg:inline-block text-white">Menu</span>
           </button>
         </div>
       </div>

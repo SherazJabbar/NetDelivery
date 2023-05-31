@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import locationIcon from "../../assets/location-pin.png";
-import editIcon from "../../assets/pencil.png";
+import editIcon from "../../assets/pencil.svg";
 import CrossIcon from "../../assets/cross-icon.svg"
 
 const DeliverToAddress = () => {

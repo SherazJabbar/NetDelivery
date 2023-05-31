@@ -81,15 +81,17 @@ export const Checkout = () => {
                         className="w-4 h-4 mr-2"
                       />
                       <div className="flex flex-col md:flex-row">
-                      <div className="flex flex-col w-4/5">
-                        <h2 className="text-sm font-medium">Umthunzi Views</h2>
-                        <p className="text-xs text-graytext">
-                          153 Walton Ave, 64 umthunzi view, Carlswald, Midrand
-                        </p>
-                      </div>
-                      <button className="rounded-full text-xs font-medium bg-gray w-full md:w-14 h-8 flex items-center justify-center ml-auto flex-shrink-0">
-                        Edit
-                      </button>
+                        <div className="flex flex-col w-4/5">
+                          <h2 className="text-sm font-medium">
+                            Umthunzi Views
+                          </h2>
+                          <p className="text-xs text-graytext">
+                            153 Walton Ave, 64 umthunzi view, Carlswald, Midrand
+                          </p>
+                        </div>
+                        <button className="rounded-full text-xs font-medium bg-gray w-full md:w-14 h-8 flex items-center justify-center ml-auto flex-shrink-0">
+                          Edit
+                        </button>
                       </div>
                     </div>
                   </div>
@@ -103,17 +105,17 @@ export const Checkout = () => {
                         className="w-4 h-4 mr-2"
                       />
                       <div className="flex flex-col md:flex-row">
-                      <div className="flex flex-col w-4/5">
-                        <h2 className="text-sm font-medium">
-                          Meet at the door
-                        </h2>
-                        <p className="text-xs text-graytext">
-                          Call when at the security gate
-                        </p>
-                      </div>
-                      <button className="rounded-full text-xs font-medium bg-gray w-full md:w-14 h-8 flex items-center justify-center ml-auto flex-shrink-0">
-                        Edit
-                      </button>
+                        <div className="flex flex-col w-4/5">
+                          <h2 className="text-sm font-medium">
+                            Meet at the door
+                          </h2>
+                          <p className="text-xs text-graytext">
+                            Call when at the security gate
+                          </p>
+                        </div>
+                        <button className="rounded-full text-xs font-medium bg-gray w-full md:w-14 h-8 flex items-center justify-center ml-auto flex-shrink-0">
+                          Edit
+                        </button>
                       </div>
                     </div>
                   </div>

@@ -30,7 +30,7 @@ export const PickupPage = () => {
                 activeTab === "delivery"
                   ? "bg-primary text-white"
                   : "bg-gray text-black"
-              } px-8 py-2 rounded-full font-medium`}
+              } px-3 md:px-8 py-2 rounded-full font-medium`}
               onClick={() => handleTabClick("delivery")}
             >
               Delivery
@@ -40,7 +40,7 @@ export const PickupPage = () => {
                 activeTab === "pickup"
                   ? "bg-primary text-white"
                   : "bg-gray text-black"
-              } px-8 py-2 rounded-full font-medium`}
+              } px-3 md:px-8 py-2 rounded-full font-medium`}
               onClick={() => handleTabClick("pickup")}
             >
               Pickup
@@ -55,8 +55,8 @@ export const PickupPage = () => {
         <div className="flex flex-col sm:flex-row mt-10 md:mt-0">
           <div className="w-full sm:w-1/2 xl:w-1/4 delivery-card-height ">
             <div className="flex flex-col gap-3">
-              <div className="flex bg-white rounded-lg shadow-md min-h-28 delivery-card">
-                <div className="w-1/4 py-4 pl-4 h-28">
+              <div className="flex flex-col md:flex-row bg-white rounded-lg shadow-md min-h-28 delivery-card">
+                <div className="w-full md:w-1/4 py-4 pl-4 h-28">
                   <img
                     src={FoodImage1}
                     alt="Food"
@@ -75,8 +75,8 @@ export const PickupPage = () => {
                 </div>
               </div>
 
-              <div className="flex bg-white rounded-lg shadow-md min-h-28 delivery-card">
-                <div className="w-1/4 py-4 pl-4 h-28">
+              <div className="flex flex-col md:flex-row bg-white rounded-lg shadow-md min-h-28 delivery-card">
+                <div className="w-full md:w-1/4 py-4 pl-4 h-28">
                   <img
                     src={FoodImage2}
                     alt="Food"
@@ -95,8 +95,8 @@ export const PickupPage = () => {
                 </div>
               </div>
 
-              <div className="flex bg-white rounded-lg shadow-md min-h-28 delivery-card">
-                <div className="w-1/4 py-4 pl-4 h-28">
+              <div className="flex flex-col md:flex-row bg-white rounded-lg shadow-md min-h-28 delivery-card">
+                <div className="w-full md:w-1/4 py-4 pl-4 h-28">
                   <img
                     src={FoodImage3}
                     alt="Food"
@@ -115,8 +115,8 @@ export const PickupPage = () => {
                 </div>
               </div>
 
-              <div className="flex bg-white rounded-lg shadow-md min-h-28 delivery-card">
-                <div className="w-1/4 py-4 pl-4 h-28">
+              <div className="flex flex-col md:flex-row bg-white rounded-lg shadow-md min-h-28 delivery-card">
+                <div className="w-full md:w-1/4 py-4 pl-4 h-28">
                   <img
                     src={FoodImage4}
                     alt="Food"

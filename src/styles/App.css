@@ -62,7 +62,7 @@ input:focus {
   box-shadow: none !important;
 }
 
-.white-icon{
+.white-icon {
   filter: brightness(0) invert(1);
 }
 /********** Range Input Styles **********/

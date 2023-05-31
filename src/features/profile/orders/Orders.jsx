@@ -80,7 +80,9 @@ export const Orders = () => {
                 <div className="w-6 h-6 bg-primary rounded-full text-white flex items-center justify-center">
                   1
                 </div>
-                <div className="ml-2 text-md">Double Chick n Boerie, Top Deluxe Burger </div>
+                <div className="ml-2 text-md">
+                  Double Chick n Boerie, Top Deluxe Burger{" "}
+                </div>
               </div>
             </div>
             <div className="bg-primary text-white rounded-lg mt-4 py-2 px-4 ml-4 w-full sm:w-auto">
