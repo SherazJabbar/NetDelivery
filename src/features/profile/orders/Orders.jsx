@@ -3,7 +3,7 @@ import Food1 from "../../../assets/food-1.jpg";
 import Food2 from "../../../assets/food-2.jpg";
 import Food3 from "../../../assets/food-3.jpg";
 import Food4 from "../../../assets/food-4.jpg";
-
+import { NavLink } from "react-router-dom";
 export const Orders = () => {
   return (
     <div>
@@ -43,7 +43,10 @@ export const Orders = () => {
               </div>
             </div>
             <div className="bg-primary text-white rounded-lg mt-4 py-2 px-4 ml-4 w-full sm:w-auto">
+              <NavLink to="/view-store">
+
               View Store
+              </NavLink>
             </div>
           </div>
           <hr className="my-2 border-darkgray"></hr>
@@ -84,7 +87,9 @@ export const Orders = () => {
               </div>
             </div>
             <div className="bg-primary text-white rounded-lg mt-4 py-2 px-4 ml-4 w-full sm:w-auto">
+              <NavLink to="/view-store">
               View Store
+              </NavLink>
             </div>
           </div>
           <hr className="my-2 border-darkgray"></hr>
@@ -119,7 +124,10 @@ export const Orders = () => {
               </div>
             </div>
             <div className="bg-primary text-white rounded-lg mt-4 py-2 px-4 ml-4 w-full sm:w-auto">
+              <NavLink to="/view-store">
+
               View Store
+              </NavLink>
             </div>
           </div>
           <hr className="my-2 border-darkgray"></hr>
@@ -154,7 +162,10 @@ export const Orders = () => {
               </div>
             </div>
             <div className="bg-primary text-white rounded-lg mt-4 py-2 px-4 ml-4 w-full sm:w-auto">
+              <NavLink to="/view-store">
+
               View Store
+              </NavLink>
             </div>
           </div>
           <hr className="my-2 border-darkgray"></hr>

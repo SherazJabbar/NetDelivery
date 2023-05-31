@@ -137,7 +137,14 @@ export const PickupPage = () => {
             </div>
           </div>
           <div className="w-full sm:w-1/2 xl:w-3/4  pl-4">
-            Map will be used here
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26545520.623759594!2d-116.9880972791806!3d35.69128089428282!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54eab584e432360b%3A0x1c3bb99243deb742!2sUnited%20States!5e0!3m2!1sen!2s!4v1685542409935!5m2!1sen!2s"
+              width="100%"
+              height="100%"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
             {/* <MapContainer center={position} zoom={13} scrollWheelZoom={false}>
               <TileLayer
                 attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
