@@ -16,7 +16,7 @@ const NetAccess = () => {
   return (
     <div>
       <Navbar />
-      <div className="px-16 pb-16">
+      <div className="px-16 pb-16 mt-32">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 2xl:gap-20 py-10">
           {/* Card 1 */}
           <div className="bg-green text-white rounded-lg p-4 min-h-200 sm:min-h-250 w-full xl:w-8/12 flex flex-col justify-center">
@@ -28,7 +28,7 @@ const NetAccess = () => {
               <div className="mb-2">R100/pm</div>
             </div>
 
-            <button className="bg-white text-secondary px-4 py-2 rounded-full w-max mt-2">
+            <button className="bg-white text-secondary px-4 py-2 rounded-full w-max mt-2 font-medium">
               Subscribe now
             </button>
           </div>
@@ -43,7 +43,7 @@ const NetAccess = () => {
               <div className="mb-2">R100/pm</div>
             </div>
 
-            <button className="bg-white text-secondary px-4 py-2 rounded-full w-max mt-2">
+            <button className="bg-white text-secondary px-4 py-2 rounded-full w-max mt-2 font-medium">
               Subscribe now
             </button>
           </div>
@@ -58,7 +58,7 @@ const NetAccess = () => {
               <div className="mb-2">R500/pm</div>
             </div>
 
-            <button className="bg-white text-secondary px-4 py-2 rounded-full w-max mt-2">
+            <button className="bg-white text-secondary px-4 py-2 rounded-full w-max mt-2 font-medium">
               Subscribe now
             </button>
           </div>

@@ -2,7 +2,9 @@ import React, { useState } from "react";
 import Navbar from "../../components/Navbar";
 import Food1 from "../../assets/food-1.jpg";
 import PlusIcon from "../../assets/plus-icon.svg";
-import CrossIcon from "../../assets/cross-icon.svg"
+import NextButton from "../../assets/next-button.svg";
+import CrossIcon from "../../assets/cross-icon.svg";
+import GroupOrder from "../../assets/sign-up.svg";
 
 export const ItemView = () => {
   const [accordionOpen, setAccordionOpen] = useState(false);
@@ -25,7 +27,7 @@ export const ItemView = () => {
   return (
     <div>
       <Navbar />
-      <div className="px-16 py-8">
+      <div className="px-16 py-8 mt-32">
         <div className="w-full md:w-1/2 mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div>
@@ -67,7 +69,7 @@ export const ItemView = () => {
                       <span className="absolute bottom-0 left-0 w-full h-px bg-secondary top-5"></span>
                     </h3>
 
-                    <img src={PlusIcon} className="w-4 h-4" />
+                    <img src={NextButton} className="w-4 h-4" />
                   </div>
                   {accordionOpen && (
                     <div className="px-4 py-3 accordion-content mt-2 text-lg font-medium">
@@ -132,7 +134,7 @@ export const ItemView = () => {
       {/* Modal */}
 
       {isModalOpen && (
-        <div className="fixed top-0 right-0 bottom-0 bg-black bg-opacity-50 flex items-center justify-end w-full">
+        <div className="fixed top-0 right-0 bottom-0 bg-black bg-opacity-50 flex items-center justify-end w-full side-modals">
           <div className="bg-white relative p-10 w-full sm:w-1/2 lg:w-1/4 h-full flex flex-col justify-between">
             {/* Modal content */}
             <div>
@@ -141,16 +143,27 @@ export const ItemView = () => {
                 Deliver to <span>539, Belgium Street.</span>
               </p>
               <div className="flex my-4 text-md justify-start">
-                <button className="rounded-full bg-primary text-white px-4 py-1 mr-2">
+                <button className="rounded-full bg-primary text-white px-2 py-1 mr-2 flex items-center ">
+                  <img
+                    src={PlusIcon}
+                    alt="Plus Icon"
+                    className="w-4 h-4 mr-1 white-icon"
+                  />
                   Add Items
                 </button>
-                <button className="rounded-full bg-primary text-white px-4 py-1">
+
+                <button className="rounded-full bg-primary text-white px-2 py-1 mr-2 flex items-center ">
+                  <img
+                    src={GroupOrder}
+                    alt="Group Order"
+                    className="w-4 h-4 mr-1 white-icon"
+                  />
                   Group Order
                 </button>
               </div>
               <div className="my-2">
                 <input
-                  type="number"
+                  type="text"
                   id="quantity"
                   className="w-10 max-w-max px-2 py-1 border border-none bg-gray rounded ml-2"
                   defaultValue="1"

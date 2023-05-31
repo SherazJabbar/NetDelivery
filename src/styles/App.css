@@ -53,6 +53,18 @@
   height: 100px;
 }
 
+.side-modals {
+  z-index: 100 !important;
+}
+
+input:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.white-icon{
+  filter: brightness(0) invert(1);
+}
 /********** Range Input Styles **********/
 /*Range Reset*/
 input[type="range"] {

@@ -8,8 +8,8 @@ export const Orders = () => {
   return (
     <div>
       <Navbar />
-      <div className="px-16 py-8">
-        <h1 className="text-3xl font-bold">Past Orders</h1>
+      <div className="px-16 py-8 mt-32">
+        <h1 className="text-3xl font-bold leading-tight">Past Orders</h1>
 
         <div className="grid grid-cols-1 gap-4 mt-8">
           {/* Order Item */}

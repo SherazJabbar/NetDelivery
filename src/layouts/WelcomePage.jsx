@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect  } from "react";
 import { useNavigate } from "react-router-dom";
 
 // assets
@@ -12,9 +12,9 @@ import twitterIcon from "../assets/twitter-icon.png";
 import facebookIcon from "../assets/facebook-icon.png";
 import RestaurantPartner from "../assets/restaurant-partner.png";
 import CourierPartner from "../assets/courier-partner.png";
-import SignInIcon from "../assets/sign-in-icon.png";
-import SignUpIcon from "../assets/sign-up-icon.png";
-import MenuIcon from "../assets/menu-icon.png";
+import SignInIcon from "../assets/sign-in.svg";
+import SignUpIcon from "../assets/sign-up.svg";
+import MenuIcon from "../assets/menu.svg";
 import CrossIcon from "../assets/cross-icon.svg";
 
 export const WelcomePage = () => {
@@ -41,54 +41,56 @@ export const WelcomePage = () => {
     navigate("/home");
   };
 
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 0);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <div>
       <div>
         <div className="bg-[url('./assets/home-page-bg.png')] bg-cover bg-initial md:bg-center h-screen flex flex-col">
-          <div className="flex justify-between px-16 py-10 items-center">
-            <div className="flex items-center">
-              <img src={logoImage} alt="Logo" className="w-56 mr-2" />
-            </div>
-            <div className="flex space-x-4">
-              <button
-                onClick={navigateToSignIn}
-                className="bg-white text-secondary px-4 py-3 rounded-full flex items-center text-sm font-bold"
-              >
-                <img
-                  className="mr-2 h-auto md:h-4 xl:h-5"
-                  src={SignInIcon}
-                  alt="Sign In"
-                />
-                <span className="hidden md:inline-block text-secondary">
-                  Sign In
-                </span>
-              </button>
-              <button
-                onClick={navigateToSignUp}
-                className="bg-primary text-secondary px-4 py-3 rounded-full flex items-center text-sm font-bold"
-              >
-                <img
-                  className="mr-2 h-auto md:h-4 xl:h-5"
-                  src={SignUpIcon}
-                  alt="Sign Up"
-                />
-                <span className="hidden md:inline-block text-white">
-                  Sign Up
-                </span>
-              </button>
-              <button
-                className="bg-primary text-secondary px-4 py-3 rounded-full flex items-center text-sm font-bold"
-                onClick={handleMenuClick}
-              >
-                <img
-                  className="mr-2 h-auto md:h-4 xl:h-5"
-                  src={MenuIcon}
-                  alt="Menu"
-                />
-                <span className="hidden md:inline-block text-white">Menu</span>
-              </button>
-            </div>
-          </div>
+   <div className={`fixed top-0 left-0 right-0 z-50 bg-white  ${isScrolled ? "shadow-md" : "bg-opacity-0"}`}>
+      <div className="flex justify-between px-4 md:px-16 py-6 items-center">
+        <div className="flex items-center">
+          <img src={logoImage} alt="Logo" className="w-56 mr-2" />
+        </div>
+        <div className="flex space-x-2 md:space-x-4">
+          <button
+            onClick={navigateToSignIn}
+            className="bg-white text-secondary px-4 py-3 shadow-md rounded-full flex items-center text-sm font-bold"
+          >
+            <img className="mr-2 h-4 w-4" src={SignInIcon} alt="Sign In" />
+            <span className="hidden md:inline-block text-secondary">
+              Sign In
+            </span>
+          </button>
+          <button
+            onClick={navigateToSignUp}
+            className="bg-primary text-secondary shadow-md px-4 py-3 rounded-full flex items-center text-sm font-bold"
+          >
+            <img className="mr-2 h-4 w-4" src={SignUpIcon} alt="Sign Up" />
+            <span className="hidden md:inline-block text-white">Sign Up</span>
+          </button>
+          <button
+            className="bg-primary text-secondary px-4 py-3 shadow-md rounded-full flex items-center text-sm font-bold"
+            onClick={handleMenuClick}
+          >
+            <img className="mr-2 h-4 w-4" src={MenuIcon} alt="Menu" />
+            <span className="hidden md:inline-block text-white">Menu</span>
+          </button>
+        </div>
+      </div>
+    </div>
           <div className="sm:w-full md:w-6/12 flex flex-col items-start justify-center px-16 flex-grow">
             <div className="text-primary text-left mb-4">
               <h2 className="text-2xl font-bold">
@@ -194,7 +196,7 @@ export const WelcomePage = () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-2 gap-x-8 px-16  px-3 md:px-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 px-16  px-3 md:px-16">
           <div>
             <h5 className="text-4xl xl:text-5xl font-extrabold mb-0 leading-tight">
               Cities and Suburbs we do
@@ -204,15 +206,15 @@ export const WelcomePage = () => {
             </h5>
             <div className="grid grid-cols-1 gap-y-2">
               <div className="py-5 mt-4 font-bold text-3xl">Johannesburg</div>
-              <div className="py-3 text-base xl:text-xl">Midrand</div>
-              <div className="py-3  text-base xl:text-xl">Tembisa</div>
+              <div className="py-3 text-base xl:text-xl font-medium">Midrand</div>
+              <div className="py-3 text-base xl:text-xl font-medium">Tembisa</div>
             </div>
           </div>
         </div>
         <footer className="px-16 mt-24 footer-height bg-gray flex flex-col">
           <div>
             <img
-              className="w-44 xl:w-56 pt-5 xl:pt-20 pb-5 xl:pb-0"
+              className="w-40 xl:w-48 pt-5 xl:pt-20 pb-5"
               src={logoImage}
               alt="Logo Icon"
             />
@@ -268,7 +270,7 @@ export const WelcomePage = () => {
       </div>
       {/* Modal */}
       {isModalOpen && (
-        <div className="fixed top-0 right-0 bottom-0 bg-black bg-opacity-50 flex items-center justify-end w-full">
+        <div className="fixed top-0 right-0 bottom-0 bg-black bg-opacity-50 flex items-center justify-end w-full side-modals">
           <div className="bg-white p-10 w-full sm:w-1/2 lg:w-1/4 h-full flex flex-col justify-between">
             {/* Modal content */}
             <div className="flex flex-col gap-y-4">
@@ -278,7 +280,7 @@ export const WelcomePage = () => {
                   className="bg-darkgray text-secondary font-medium px-4 py-3.5 rounded w-full flex items-center"
                 >
                   <img
-                    className="mr-2 h-auto md:h-4 xl:h-5"
+                    className="mr-2 h-4 w-4"
                     src={SignInIcon}
                     alt="Sign In"
                   />
@@ -292,7 +294,7 @@ export const WelcomePage = () => {
                   className="bg-primary text-white font-medium px-4 py-3.5 rounded w-full flex items-center"
                 >
                   <img
-                    className="mr-2 h-auto md:h-4 xl:h-5"
+                    className="mr-2 h-4 w-4"
                     src={SignUpIcon}
                     alt="Sign Up"
                   />
@@ -300,7 +302,7 @@ export const WelcomePage = () => {
                 </button>
               </div>
 
-              <div className="text-md font-medium py-8">
+              <div className="text-lg font-medium py-8">
                 <p className="py-1">Sign up as a Restaurant partner</p>
                 <p className="py-1">Sign up as a Courier partner</p>
               </div>

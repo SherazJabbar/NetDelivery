@@ -22,7 +22,7 @@ export const PickupPage = () => {
   return (
     <div>
       <Navbar />
-      <div className="px-16">
+      <div className="px-16 mt-32">
         <div className="flex justify-between py-3 items-center">
           <div className="flex items-center rounded-full bg-gray p-1">
             <button
@@ -52,7 +52,7 @@ export const PickupPage = () => {
           <p>Pick up near Freedom Road, Midrand</p>
         </div>
 
-        <div className="flex flex-col sm:flex-row">
+        <div className="flex flex-col sm:flex-row mt-10 md:mt-0">
           <div className="w-full sm:w-1/2 xl:w-1/4 delivery-card-height ">
             <div className="flex flex-col gap-3">
               <div className="flex bg-white rounded-lg shadow-md min-h-28 delivery-card">

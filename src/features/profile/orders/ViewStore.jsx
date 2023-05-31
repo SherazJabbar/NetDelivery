@@ -34,7 +34,7 @@ export const ViewStore = () => {
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-8">
           <div className="col-span-1 lg:col-span-3">
             <div>
-              <p className="text-3xl font-bold">Mcdonald's , StoneRidge 2</p>
+              <p className="text-3xl font-bold leading-tight">Mcdonald's , StoneRidge 2</p>
             </div>
             <div className="flex items-center text-secondary text-md font-semibold">
               <img

@@ -30,11 +30,11 @@ export const Checkout = () => {
   return (
     <div>
       <Navbar />
-      <div className="px-16">
+      <div className="px-16 mt-32">
         <div className="w-full md:w-3/4 mx-auto">
           <div className="grid grid-cols-12">
             <div className="col-span-12 lg:col-span-8">
-              <div className="flex items-center">
+              <div className="flex flex-col sm:flex-row items-center">
                 <div className="w-12 h-12 rounded-full overflow-hidden">
                   <img
                     src={Food1}
@@ -80,15 +80,17 @@ export const Checkout = () => {
                         alt="Location"
                         className="w-4 h-4 mr-2"
                       />
+                      <div className="flex flex-col md:flex-row">
                       <div className="flex flex-col w-4/5">
                         <h2 className="text-sm font-medium">Umthunzi Views</h2>
                         <p className="text-xs text-graytext">
                           153 Walton Ave, 64 umthunzi view, Carlswald, Midrand
                         </p>
                       </div>
-                      <button className="rounded-full text-xs font-medium bg-gray w-14 h-8 flex items-center justify-center ml-auto flex-shrink-0">
+                      <button className="rounded-full text-xs font-medium bg-gray w-full md:w-14 h-8 flex items-center justify-center ml-auto flex-shrink-0">
                         Edit
                       </button>
+                      </div>
                     </div>
                   </div>
                   <hr className="my-2 border-darkgray"></hr>
@@ -100,6 +102,7 @@ export const Checkout = () => {
                         alt="Location"
                         className="w-4 h-4 mr-2"
                       />
+                      <div className="flex flex-col md:flex-row">
                       <div className="flex flex-col w-4/5">
                         <h2 className="text-sm font-medium">
                           Meet at the door
@@ -108,9 +111,10 @@ export const Checkout = () => {
                           Call when at the security gate
                         </p>
                       </div>
-                      <button className="rounded-full text-xs font-medium bg-gray w-14 h-8 flex items-center justify-center ml-auto flex-shrink-0">
+                      <button className="rounded-full text-xs font-medium bg-gray w-full md:w-14 h-8 flex items-center justify-center ml-auto flex-shrink-0">
                         Edit
                       </button>
+                      </div>
                     </div>
                   </div>
                   <hr className="my-2 border-darkgray"></hr>
@@ -140,7 +144,7 @@ export const Checkout = () => {
                 <h2 className="text-md font-semibold">Payment </h2>
                 <div className="grid grid-cols-1 gap-2 my-2">
                   <div className="grid grid-cols-1 gap-4">
-                    <div className="flex items-center">
+                    <div className="flex flex-col md:flex-row items-center">
                       <div className="flex items-center bg-gray rounded-full p-1">
                         <button
                           className={`${
@@ -173,9 +177,13 @@ export const Checkout = () => {
                       </div>
 
                       <div className="flex flex-col w-4/5">
-                        <h2 className="text-xs font-medium pl-2">Personal</h2>
+                        <h2 className="text-xs font-medium pl-2">
+                          {activeProfileTab === "profile"
+                            ? "Personal"
+                            : "Business"}
+                        </h2>
                       </div>
-                      <button className="rounded-full text-xs font-medium bg-gray w-14 h-8 flex items-center justify-center ml-auto flex-shrink-0">
+                      <button className="rounded-full text-xs font-medium bg-gray w-full md:w-14 h-8 flex items-center justify-center ml-auto flex-shrink-0">
                         Edit
                       </button>
                     </div>
@@ -183,16 +191,16 @@ export const Checkout = () => {
                   <hr className="my-2 border-darkgray"></hr>
 
                   <div className="grid grid-cols-1 gap-4">
-                    <div className="flex items-center">
+                    <div className="flex flex-col md:flex-row items-center">
                       <img
                         src={PromoIcon}
-                        alt="Location"
+                        alt="Promo Icon"
                         className="w-4 h-4 mr-2 filter brightness-0"
                       />
                       <div className="flex flex-col w-4/5">
                         <h2 className="text-xs font-medium">Add Promo Code</h2>
                       </div>
-                      <button className="rounded-full text-xs font-medium bg-gray w-14 h-8 flex items-center justify-center ml-auto flex-shrink-0">
+                      <button className="rounded-full text-xs font-medium bg-gray w-full md:w-14 h-8 flex items-center justify-center ml-auto flex-shrink-0">
                         Add
                       </button>
                     </div>
@@ -318,10 +326,10 @@ export const Checkout = () => {
 
                   <hr className="my-2 border-darkgray"></hr>
 
-                  <div className="grid grid-cols-2 gap-2 my-1 font-semibold">
-                    <div className="text-lg">Order Summary</div>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-2 my-1 font-semibold">
+                    <div className="text-lg leading-tight">Order Summary</div>
                     <div className="text-sm text-start sm:text-end ">
-                      <button className="rounded-full bg-primary text-white text-xs font-medium px-2 py-1 mr-2">
+                      <button className="rounded-full bg-primary w-full md:w-max text-white text-xs font-medium px-2 py-1 mr-2">
                         Add Items
                       </button>
                     </div>

@@ -1,9 +1,10 @@
+import { useState, useEffect  } from "react";
 import logoImage from "../assets/net-delivery-logo.png";
 import locationIcon from "../assets/location-pin.png";
-import CartIcon from "../assets/shopping-cart.png";
-import SignInIcon from "../assets/sign-in-icon.png";
-import SignUpIcon from "../assets/sign-up-icon.png";
-import MenuIcon from "../assets/menu-icon.png";
+import CartIcon from "../assets/cart-white.svg";
+import SignInIcon from "../assets/sign-in.svg";
+import SignUpIcon from "../assets/sign-up.svg";
+import MenuIcon from "../assets/menu.svg";
 import { useLocation } from "react-router-dom";
 import { showModal } from "../store";
 import { useDispatch } from "react-redux";
@@ -24,10 +25,26 @@ export const Navbar = () => {
   const handleHomePageMenu = () => {
     dispatch(showModal());
   };
+
+    const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 0);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
   return (
-    <div className="flex justify-between px-16 py-10 items-center">
+
+     <div className={`fixed top-0 left-0 right-0 z-50 bg-white  ${isScrolled ? "shadow-md" : "bg-opacity-0"}`}>
+    <div className="flex justify-between px-4 md:px-16 py-6 items-center">
       <div className="flex items-center">
-        <img src={logoImage} alt="Logo" className="w-56 mr-2" />
+        <img src={logoImage} alt="Logo" className="w-40 xl:w-48 mr-2" />
       </div>
 
       {showLocation && (
@@ -87,7 +104,7 @@ export const Navbar = () => {
           </form>
         </div>
       )}
-      <div className="flex space-x-4 items-center">
+      <div className="flex space-x-2 md:space-x-4 items-center">
         {isPickupRoute && (
           <div className="flex items-center">
             <img src={CartIcon} alt="Add to Cart" className="w-8 mr-2" />
@@ -97,7 +114,7 @@ export const Navbar = () => {
         {isPickupRoute && (
           <button className="bg-primary text-white px-4 py-3 rounded-full flex items-center text-sm font-bold">
             <img
-              className="mr-2 h-auto md:h-4 xl:h-5 navbar-icon-color"
+              className="mr-2 navbar-icon-color w-4 h-4"
               src={SignInIcon}
               alt="Sign In"
             />
@@ -107,7 +124,7 @@ export const Navbar = () => {
         {isPickupRoute && (
           <button className="bg-primary text-white px-4 py-3 rounded-full flex items-center text-sm font-bold">
             <img
-              className="mr-2 h-auto md:h-4 xl:h-5 navbar-icon-color"
+              className="mr-2 navbar-icon-color w-4 h-4"
               src={SignUpIcon}
               alt="Sign Up"
             />
@@ -121,7 +138,7 @@ export const Navbar = () => {
             className="bg-primary text-white px-4 py-3 rounded-full flex items-center text-sm font-bold"
           >
             <img
-              className="mr-2 h-auto md:h-4 xl:h-5 navbar-icon-color"
+              className="mr-2 navbar-icon-color w-4 h-4"
               src={MenuIcon}
               alt="Menu"
             />
@@ -132,17 +149,18 @@ export const Navbar = () => {
         {showLocation && (
           <button className="bg-primary text-white px-4 py-3 rounded-full flex items-center text-sm font-bold">
             <img
-              className="mr-2 h-4 xl:h-5 navbar-icon-color"
+              className="mr-2 w-4 h-4 navbar-icon-color"
               src={CartIcon}
               alt="Cart"
             />
-            <span className="hidden md:inline-block">
+            <span className="hidden lg:inline-block">
               <span>0 </span>
               <span>Carts</span>
             </span>
           </button>
         )}
       </div>
+    </div>
     </div>
   );
 };

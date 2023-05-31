@@ -8,8 +8,8 @@ export const Favourites = () => {
   return (
     <div>
       <Navbar />
-      <div className="px-16 py-8">
-        <h1 className="text-3xl font-bold">Currently Unavailable</h1>
+      <div className="px-16 py-8 mt-32">
+        <h1 className="text-3xl font-bold leading-tight">Currently Unavailable</h1>
 
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-x-1 gap-y-2 mt-8">
           <div className="bg-white rounded-lg p-2">

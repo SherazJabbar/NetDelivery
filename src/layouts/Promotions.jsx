@@ -23,7 +23,7 @@ const Promotions = () => {
 
       {/* Modal */}
       {isModalOpen && (
-        <div className="fixed top-0 left-0 right-0 bottom-0 bg-black bg-opacity-50 flex items-center justify-center">
+        <div className="fixed top-0 left-0 right-0 bottom-0 bg-black bg-opacity-50 flex items-center justify-center overflow-y-scroll">
           <div className="bg-white p-4 w-11/12 sm:w-1/2 xl:w-1/3">
             <div>
               <button className="text-primary pb-4" onClick={closeModal}>

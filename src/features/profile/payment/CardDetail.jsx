@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import CrossIcon from "../../../assets/cross-icon.svg"
 
 const CardDetail = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -21,11 +22,11 @@ const CardDetail = () => {
 
       {/* Modal */}
       {isModalOpen && (
-        <div className="fixed top-0 left-0 right-0 bottom-0 bg-black bg-opacity-50 flex items-center justify-center">
+        <div className="fixed top-0 left-0 right-0 bottom-0 bg-black bg-opacity-50 flex items-center justify-center overflow-y-scroll">
           <div className="bg-white p-4 w-11/12 md:w-2/6 rounded-md">
             <div>
               <button className="text-primary" onClick={closeModal}>
-                X
+                 <img src={CrossIcon} className="w-4 h-4" />
               </button>
             </div>
             <h2 className="text-xl font-bold py-4">

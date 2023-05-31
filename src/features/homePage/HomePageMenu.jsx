@@ -9,8 +9,8 @@ import NetAccessIcon from "../../assets/netaccess.svg";
 import HelpIcon from "../../assets/help.svg";
 import LogoutIcon from "../../assets/logout.svg";
 import CrossIcon from "../../assets/cross-icon.svg";
-import SignInIcon from "../../assets/sign-in-icon.png";
-import SignUpIcon from "../../assets/sign-up-icon.png";
+import SignInIcon from "../../assets/sign-in.svg";
+import SignUpIcon from "../../assets/sign-up.svg";
 import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { hideModal } from "../../store";
@@ -41,7 +41,7 @@ const HomePageMenu = () => {
 
       {/* Modal */}
       {isModalOpen && isSignedIn ? (
-        <div className="fixed top-0 right-0 bottom-0 bg-black bg-opacity-50 flex items-center justify-end w-full">
+        <div className="fixed top-0 right-0 bottom-0 bg-black bg-opacity-50 flex items-center justify-end w-full side-modals">
           <div className="bg-white p-10 w-full sm:w-1/2 lg:w-1/4 h-full flex flex-col justify-between overflow-y-scroll">
             {/* Modal content */}
             <div className="flex flex-col gap-y-4">
@@ -129,7 +129,7 @@ const HomePageMenu = () => {
               </div>
               <div>
                 {/* Rest of the modal content */}
-                <div className="text-md font-medium py-8">
+                <div className="text-lg font-medium py-8">
                   <p className="py-1">Sign up as a Restaurant partner</p>
                   <p className="py-1">Sign up as a Courier partner</p>
                 </div>
@@ -169,7 +169,7 @@ const HomePageMenu = () => {
           </div>
         </div>
       ) : (
-        <div className="fixed top-0 right-0 bottom-0 bg-black bg-opacity-50 flex items-center justify-end w-full">
+        <div className="fixed top-0 right-0 bottom-0 bg-black bg-opacity-50 flex items-center justify-end w-full side-modals">
           <div className="bg-white p-10 w-full sm:w-1/2 lg:w-1/4 h-full flex flex-col justify-between">
             {/* Modal content */}
             <div className="flex flex-col gap-y-4">
@@ -179,7 +179,7 @@ const HomePageMenu = () => {
                   className="bg-darkgray text-secondary font-medium px-4 py-3.5 rounded w-full flex items-center"
                 >
                   <img
-                    className="mr-2 h-auto md:h-4 xl:h-5"
+                    className="mr-2 h-4 w-4"
                     src={SignInIcon}
                     alt="Sign In"
                   />
@@ -193,7 +193,7 @@ const HomePageMenu = () => {
                   className="bg-primary text-white font-medium px-4 py-3.5 rounded w-full flex items-center"
                 >
                   <img
-                    className="mr-2 h-auto md:h-4 xl:h-5"
+                    className="mr-2 h-4 w-4"
                     src={SignUpIcon}
                     alt="Sign Up"
                   />
@@ -201,7 +201,7 @@ const HomePageMenu = () => {
                 </button>
               </div>
 
-              <div className="text-md font-medium py-8">
+              <div className="text-lg font-medium py-8">
                 <p className="py-1">Sign up as a Restaurant partner</p>
                 <p className="py-1">Sign up as a Courier partner</p>
               </div>

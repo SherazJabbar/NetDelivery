@@ -56,7 +56,7 @@ export const HomePage = () => {
   return (
     <div>
       <Navbar />
-      <div className="px-16 py-8">
+      <div className="px-16 py-8 mt-32">
         <div className="grid grid-cols-12 mb-10 gap-x-16">
           <div className="col-span-3">
             <div className="flex flex-col justify-end h-full">
