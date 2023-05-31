@@ -80,7 +80,7 @@ export const Checkout = () => {
                         alt="Location"
                         className="w-4 h-4 mr-2"
                       />
-                      <div className="flex flex-col md:flex-row">
+                      <div className="flex flex-col md:flex-row w-full">
                         <div className="flex flex-col w-4/5">
                           <h2 className="text-sm font-medium">
                             Umthunzi Views
@@ -104,7 +104,7 @@ export const Checkout = () => {
                         alt="Location"
                         className="w-4 h-4 mr-2"
                       />
-                      <div className="flex flex-col md:flex-row">
+                      <div className="flex flex-col md:flex-row w-full">
                         <div className="flex flex-col w-4/5">
                           <h2 className="text-sm font-medium">
                             Meet at the door
