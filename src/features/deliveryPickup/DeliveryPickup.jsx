@@ -9,7 +9,7 @@ import { MapContainer, TileLayer, Marker } from "react-leaflet";
 
 export const PickupPage = () => {
   const navigate = useNavigate();
-  const [activeTab, setActiveTab] = useState("delivery");
+  const [activeTab, setActiveTab] = useState("pickup");
   const position = [51.505, -0.09];
 
   const handleTabClick = (tab) => {

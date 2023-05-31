@@ -125,7 +125,7 @@ const NetAccess = () => {
                   onClick={toggleAccordion1}
                 >
                   <h3 className="text-md md:text-xl font-medium">
-                    What is NetAccess?
+                  Do I get discounts on all shops and items?
                   </h3>
 
                   <img src={PlusIcon} className="w-4 h-4" />
@@ -144,7 +144,7 @@ const NetAccess = () => {
                   onClick={toggleAccordion1}
                 >
                   <h3 className="text-md md:text-xl font-medium">
-                    What is NetAccess?
+                   How do I cancel?
                   </h3>
 
                   <img src={PlusIcon} className="w-4 h-4" />
@@ -163,7 +163,7 @@ const NetAccess = () => {
                   onClick={toggleAccordion1}
                 >
                   <h3 className="text-md md:text-xl font-medium">
-                    What is NetAccess?
+                    How long does it takes to get activated?
                   </h3>
 
                   <img src={PlusIcon} className="w-4 h-4" />
@@ -182,7 +182,7 @@ const NetAccess = () => {
                   onClick={toggleAccordion1}
                 >
                   <h3 className="text-md md:text-xl font-medium">
-                    What is NetAccess?
+                    What discounts do I get?
                   </h3>
 
                   <img src={MinusIcon} className="w-4 h-4" />
@@ -201,7 +201,7 @@ const NetAccess = () => {
                   onClick={toggleAccordion1}
                 >
                   <h3 className="text-md md:text-xl font-medium">
-                    What is NetAccess?
+                    How do I subscribe?
                   </h3>
 
                   <img src={PlusIcon} className="w-4 h-4" />

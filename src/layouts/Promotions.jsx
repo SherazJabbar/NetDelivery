@@ -2,31 +2,17 @@ import React, { useState } from "react";
 import PromotionBasket from "../assets/promotions-basket.svg";
 import CouponIcon from "../assets/coupon.svg";
 import CrossIcon from "../assets/cross-icon.svg";
-const Promotions = () => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
+const Promotions = ({ show, toggle }) => {
 
-  const openModal = () => {
-    setIsModalOpen(true);
-  };
-
-  const closeModal = () => {
-    setIsModalOpen(false);
-  };
 
   return (
     <div>
-      <div>
-        <button className="bg-primary text-white px-4 py-2" onClick={openModal}>
-          Open Modal
-        </button>
-      </div>
-
       {/* Modal */}
-      {isModalOpen && (
+      {show && (
         <div className="fixed top-0 left-0 right-0 bottom-0 bg-black bg-opacity-50 flex items-center justify-center overflow-y-scroll">
           <div className="bg-white p-4 w-11/12 sm:w-1/2 xl:w-1/3">
             <div>
-              <button className="text-primary pb-4" onClick={closeModal}>
+              <button className="text-primary pb-4" onClick={toggle}>
                 <img src={CrossIcon} className="w-4 h-4" />
               </button>
               <div>
@@ -130,7 +116,7 @@ const Promotions = () => {
               </div>
             </div>
 
-            <button className="bg-primary rounded text-white px-4 py-2 my-2 w-full">
+            <button onClick={toggle} className="bg-primary rounded text-white px-4 py-2 my-2 w-full">
               Done
             </button>
           </div>

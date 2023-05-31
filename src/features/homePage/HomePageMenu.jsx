@@ -15,11 +15,14 @@ import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { hideModal } from "../../store";
 import { NavLink } from "react-router-dom";
+import Promotions from "../../layouts/Promotions";
+import { useState } from "react";
 const HomePageMenu = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const isModalOpen = useSelector((state) => state.modal);
   const isSignedIn = useSelector((state) => state.auth);
+  const [isPromoOpen, setIsPromoOpen] = useState(false);
 
   const closeHomePageMenu = () => {
     dispatch(hideModal());
@@ -31,6 +34,9 @@ const HomePageMenu = () => {
     navigate("/signup");
   };
 
+  const handlePromotions = () => {
+    setIsPromoOpen(!isPromoOpen);
+  };
   return (
     <div>
       {/* <div>
@@ -88,16 +94,19 @@ const HomePageMenu = () => {
                     <span className="font-medium">Payments</span>
                   </div>
                 </NavLink>
-                <NavLink to="/promotions">
-                  <div className="flex items-center cursor">
-                    <img
-                      className="w-6 h-6 mr-5"
-                      src={PromotionsIcon}
-                      alt="Promotions Icon"
-                    />
-                    <span className="font-medium cursor">Promotions</span>
-                  </div>
-                </NavLink>
+
+                <div
+                  className="flex items-center cursor"
+                  onClick={handlePromotions}
+                >
+                  <img
+                    className="w-6 h-6 mr-5"
+                    src={PromotionsIcon}
+                    alt="Promotions Icon"
+                  />
+                  <span className="font-medium cursor">Promotions</span>
+                </div>
+
                 <NavLink to="/netaccess">
                   <div className="flex items-center">
                     <img
@@ -232,6 +241,7 @@ const HomePageMenu = () => {
           </div>
         </div>
       )}
+      <Promotions toggle={handlePromotions} show={isPromoOpen} />
     </div>
   );
 };
